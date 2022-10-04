@@ -92,6 +92,7 @@ class Program
         int siraNo = adres.ToLower().IndexOf(aranacakIfade.ToLower());
         Console.WriteLine($"{aranacakIfade} ifadesi {adres} içinde, {siraNo}.sıradadır.");
         */
+        //
 
     }
 }
