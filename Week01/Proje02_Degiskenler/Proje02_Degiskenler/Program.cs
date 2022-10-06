@@ -33,24 +33,24 @@ namespace Proje02_Degiskenler
 
             //TAM SAYI
             //Console.WriteLine(int.MinValue + " - " + int.MaxValue); en az-fazla ne kadar değer alabilir
-            byte sayi1 = 255;
-            int sayi2 = 45;
-            long sayi3 = 1256847569876547;
+            //byte sayi1 = 255;
+            //int sayi2 = 45;
+            //long sayi3 = 1256847569876547;
 
             //  string sayi4 = "15";
             //  Console.WriteLine(sayi4+2);
 
             //ONDALIKLI
-            float a = 10.5f;
-            double b = 20.6;
-            decimal c = 100.65m;
+            //float a = 10.5f;
+            //double b = 20.6;
+            //decimal c = 100.65m;
 
             //KARAKTER ve METİN
-            string name = "Harun Özer"; //string ifade charların birleşimidir.
-            char cinsiyet = 'E'; //Tek karakter yazılabilir
+            //string name = "Harun Özer"; //string ifade charların birleşimidir.
+            //char cinsiyet = 'E'; //Tek karakter yazılabilir
 
             //MANTIKSAL
-            bool evliMi=false; //2 sonuç içerir True or False
+            //bool evliMi=false; //2 sonuç içerir True or False
         }
     }
 }
