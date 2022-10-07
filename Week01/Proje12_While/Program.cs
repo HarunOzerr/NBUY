@@ -134,33 +134,40 @@ class Program
         int tahminEdilenSayi;
         int hak = 1;  //Kullacının o sırada kaçıncı hakkını kullandığı bilgisi.
         int hakSiniri = 5;//Kullanıcının toplam kaç hakkı olduğu bilgisi.
-
+        string mesaj="";
         do
         {
             System.Console.WriteLine($"{hak}. Tahmininizi Giriniz(1-100): ");
             tahminEdilenSayi=Convert.ToInt32(Console.ReadLine());
-            if (tahminEdilenSayi>uretilenSayi)
+            if (tahminEdilenSayi>uretilenSayi) 
             {
-                System.Console.WriteLine("Büyük Girdin.");
+                mesaj="Büyük Girdin.";
             }
             else if (tahminEdilenSayi<uretilenSayi)
             {
-                System.Console.WriteLine("Küçük Girdin.");
+                mesaj="Küçük Girdin.";
             }
             if (tahminEdilenSayi!=uretilenSayi)
             {
                 hak++;
-                if(hak<=hakSiniri)
-                {
-                    System.Console.WriteLine("Kaybettin.");
-                }
+                if (hak < hakSiniri) System.Console.WriteLine(mesaj);
             }
-            else
-            {
-                System.Console.WriteLine("Kazandın.");
-            }
-            
+
         } while (tahminEdilenSayi!=uretilenSayi && hak<=hakSiniri);
+
+        mesaj= tahminEdilenSayi == uretilenSayi ? "Kazandınız." : "Kaybettiniz.";
+        /*
+        if (tahminEdilenSayi==uretilenSayi)
+        {
+            System.Console.WriteLine("Kazandınız.");
+        }
+        else
+        {
+            System.Console.WriteLine("Kaybettiniz.");
+        }
+        */
         //Eğer program bu satıra gelmiş ise ya doğru tahminde bulunulmuştur ya da hak sona ermiştir.
+        //KESİNLİKLE BU PROGRAM ÇOK ÇEŞİTLİ/FARKLI ALGORİTMALARLA ÇÖZÜLEBİLİR.
+        
     }
 }
