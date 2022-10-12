@@ -1,5 +1,13 @@
 ﻿namespace Proje09_Interface
 {
+    /* Interface'ler için belirtilmediğinde default erişim belirleyici public'tir.
+     * Interface'ler protected, private, yada static olarak işaretlenemezler.
+     * Interface'ler içinde çalışabilir kodlar OLAMAZ! Yani metotların sadece imzası bulunur.
+     * Bir Interface, bir ya da daha çok interfaceden miras alabilir.
+     * Bir interface classtan miras alamaz.
+     * Eğer bir class, bir interface'ten miras alıyorsa, miras aldığı interface'teki tüm metotları
+     * implemente etmek zorundadır.(Implemente: Miras alınan interfacede imzası bulunan tüm metotların içi dolu halleri)
+     */
     interface IPersonel
     {
         public string Departman { get; set; }
@@ -23,15 +31,15 @@
             /*Kimi zaman AdSoyad, Adres, Maas ve Departman bilgisini vermeden de yönetici oluşturmak
             *istediğimiz zaman bu constructor çalışır
             */
-        }
-        /// <summary>
-        /// Bu metot, AdSoyad, Adres, Maas, Departman bilgileri girilerek yönetici oluşturur.
-        /// </summary>
-        /// <param name="adSoyad">Buraya Ad Soyadı girin.</param>
-        /// <param name="adres">Buraya adresi girin.</param>
-        /// <param name="maas">Buraya maaşı girin, ama yanlışlıkla string tanımladım.</param>
-        /// <param name="departman">Buraya departmanı girin.</param>
-        public Yonetici(string adSoyad, string adres, string maas, string departman)
+}
+/// <summary>
+/// Bu metot, AdSoyad, Adres, Maas, Departman bilgileri girilerek yönetici oluşturur.
+/// </summary>
+/// <param name="adSoyad">Buraya Ad Soyadı girin.</param>
+/// <param name="adres">Buraya adresi girin.</param>
+/// <param name="maas">Buraya maaşı girin, ama yanlışlıkla string tanımladım.</param>
+/// <param name="departman">Buraya departmanı girin.</param>
+    public Yonetici(string adSoyad, string adres, string maas, string departman)
         {
             AdSoyad = adSoyad;
             Adres = adres;
@@ -49,7 +57,7 @@
             Console.WriteLine($"Ad Soyad: {AdSoyad} Departman: {Departman}");
         }
     }
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -58,12 +66,32 @@
              * Eğer base classta abstract olmayan methodlar varsa, onlar aynen kullanılabilir.
              * Ancak bazen, miras alınan classtaki her methodun, içinin dolu hallerini yazmak zorunlu olsun isteriz.
              * Yani bir nevi hepsi abstract olsun isteriz. Bunu yapmak yerine, miras alınan classı, class değil
-             * -interface şeklinde tanımlarız.
+             * interface şeklinde tanımlarız.
              */
             //IPersonel personel = new IPersonel(); //Hatalı kullanım!
-            Yonetici yonetici1 = new Yonetici();
-            Yonetici yonetici2 = new Yonetici("Alex De Souza", "Rio de Jenario", "5000", "Futbol");
+            //Yonetici yonetici1 = new Yonetici();
+            //Yonetici yonetici2 = new Yonetici("Alex De Souza", "Rio de Jenario", "5000", "Futbol");
 
+            Product product1 = new Product()
+            {
+                Id = 1,
+                Name = "Iphone 11 Pro Max",
+                Price = 15750,
+                Properties = "3 Kameralı",
+                Ratio = 0.5m,
+                CreatedDate = DateTime.Now
+            };
+            Console.WriteLine($"Product Name: {product1.Name} (Büyük Harf: {product1.NameToUpper(product1.Name)}) Properties: {product1.Properties})");
+
+            Category category1 = new Category()
+            {
+                Id = 1,
+                Name = "Telefon",
+                CreatedDate = DateTime.Now,
+                Description = "Bu kategori telefonlar içindir."
+            };
+            Console.WriteLine($"Category Name: {category1.Name} Büyük Harf:({category1.NameToUpper(category1.Description)}");
+            Console.ReadLine();
         }
     }
 }

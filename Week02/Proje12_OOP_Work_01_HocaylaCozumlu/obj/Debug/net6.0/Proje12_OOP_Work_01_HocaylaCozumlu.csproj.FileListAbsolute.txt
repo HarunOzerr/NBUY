@@ -1,0 +1,15 @@
+C:\Users\SABAH\Documents\GitHub\NBUY\Week02\Proje12_OOP_Work_01_HocaylaCozumlu\bin\Debug\net6.0\Proje12_OOP_Work_01_HocaylaCozumlu.exe
+C:\Users\SABAH\Documents\GitHub\NBUY\Week02\Proje12_OOP_Work_01_HocaylaCozumlu\bin\Debug\net6.0\Proje12_OOP_Work_01_HocaylaCozumlu.deps.json
+C:\Users\SABAH\Documents\GitHub\NBUY\Week02\Proje12_OOP_Work_01_HocaylaCozumlu\bin\Debug\net6.0\Proje12_OOP_Work_01_HocaylaCozumlu.runtimeconfig.json
+C:\Users\SABAH\Documents\GitHub\NBUY\Week02\Proje12_OOP_Work_01_HocaylaCozumlu\bin\Debug\net6.0\Proje12_OOP_Work_01_HocaylaCozumlu.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\Week02\Proje12_OOP_Work_01_HocaylaCozumlu\bin\Debug\net6.0\Proje12_OOP_Work_01_HocaylaCozumlu.pdb
+C:\Users\SABAH\Documents\GitHub\NBUY\Week02\Proje12_OOP_Work_01_HocaylaCozumlu\obj\Debug\net6.0\Proje12_OOP_Work_01_HocaylaCozumlu.csproj.AssemblyReference.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\Week02\Proje12_OOP_Work_01_HocaylaCozumlu\obj\Debug\net6.0\Proje12_OOP_Work_01_HocaylaCozumlu.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SABAH\Documents\GitHub\NBUY\Week02\Proje12_OOP_Work_01_HocaylaCozumlu\obj\Debug\net6.0\Proje12_OOP_Work_01_HocaylaCozumlu.AssemblyInfoInputs.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\Week02\Proje12_OOP_Work_01_HocaylaCozumlu\obj\Debug\net6.0\Proje12_OOP_Work_01_HocaylaCozumlu.AssemblyInfo.cs
+C:\Users\SABAH\Documents\GitHub\NBUY\Week02\Proje12_OOP_Work_01_HocaylaCozumlu\obj\Debug\net6.0\Proje12_OOP_Work_01_HocaylaCozumlu.csproj.CoreCompileInputs.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\Week02\Proje12_OOP_Work_01_HocaylaCozumlu\obj\Debug\net6.0\Proje12_OOP_Work_01_HocaylaCozumlu.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\Week02\Proje12_OOP_Work_01_HocaylaCozumlu\obj\Debug\net6.0\refint\Proje12_OOP_Work_01_HocaylaCozumlu.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\Week02\Proje12_OOP_Work_01_HocaylaCozumlu\obj\Debug\net6.0\Proje12_OOP_Work_01_HocaylaCozumlu.pdb
+C:\Users\SABAH\Documents\GitHub\NBUY\Week02\Proje12_OOP_Work_01_HocaylaCozumlu\obj\Debug\net6.0\Proje12_OOP_Work_01_HocaylaCozumlu.genruntimeconfig.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\Week02\Proje12_OOP_Work_01_HocaylaCozumlu\obj\Debug\net6.0\ref\Proje12_OOP_Work_01_HocaylaCozumlu.dll
