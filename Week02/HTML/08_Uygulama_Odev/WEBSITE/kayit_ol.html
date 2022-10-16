@@ -82,7 +82,11 @@
                                         <tr>
                                             <td style="width: 30%;">Şehir:</td>
                                             <td>
-                                                <input type="button">
+                                                <SELECT NAME="sehirler">
+                                                    <OPTION SELECTED> İstanbul
+                                                    <OPTION> İzmir
+                                                    <OPTION> Ankara
+                                            </SELECT>
                                             </td>
                                         </tr>
 
@@ -97,7 +101,7 @@
                                         <tr>
                                             <td style="width: 30%;">Medeni Durum:</td>
                                             <td>
-                                                <input type="radio" name="medeniDurum" id="evli">Evli
+                                                <input type="radio" name="medeniDurum" id="evli"checked>Evli
                                                 <input type="radio" name="medeniDurum" id="bekar">Bekar
                                             </td>
                                         </tr>
@@ -108,17 +112,15 @@
                                                 <div>
                                                     <input type="checkbox" name="" id="">Sinema
                                                     <input type="checkbox" name="" id="">Tiyatro
-                                                </div>
-                                                </td>
-                                            <td>
-                                                <div>
                                                     <input type="checkbox" name="" id="">Spor
                                                     <input type="checkbox" name="" id="">Gezmek
                                                 </div>
-                                            </td>
                                         </tr>
                                         <td style="width: 30%;">
                                             <input type="button" value="Kayıt Ol">
+                                        </td>
+                                        <td>
+                                            <input type="reset">
                                         </td>
                                     </table>
                                 </form>
