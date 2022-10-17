@@ -200,13 +200,16 @@ namespace Proje13_Diziler
              * Toplam uzunluğu 6 karakter olacak şekilde RASTGELE ŞİFRE üreten programı yazınız.
              */
 
+
             char[] karakterler = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
                                    'o', 'p', 'r', 's', 't', 'u', 'v', 'y', 'z', 'x', 'w'
                                  , '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.', ',', '+', '-'};
-            Random rnd = new Random();
-
-
-
+            Random random = new Random();
+            for (int i = 0; i < 6; i++)
+            {
+                int rastgele = random.Next(0, karakterler.Length);
+                Console.Write(karakterler[rastgele]);
+            }
 
         }
     }
