@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating İmages</title>
+    <style>
+        p{
+            border: 2px solid red;
+        }
+        .resim{
+            width: 300px;
+            float: left;
+            margin-right: 10px;
+        }
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia accusamus iure illo rerum sapiente delectus velit vero? Perferendis dolores tempore voluptas ex fugit! Consectetur minima, velit amet animi voluptate eos.</p>
+        <p class="clearfix">
+        <img src="/00_Images/features.jpeg" class="resim" alt="" width="100">
+        <span>
+        Resim Buradan Başlıyor ipsum dolor sit amet consectetur adipisicing elit. Eius quos eligendi laborum suscipit dicta repudiandae facilis laboriosam eos. Sequi quos voluptatem, ipsa quia ut ad iusto quasi placeat nemo veniam.
+        </span>
+
+        <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos enim facere ab quaerat inventore minima dolores exercitationem veniam nihil, deleniti tempore, voluptatum cupiditate in sit iusto sint hic sequi natus.
+            <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur impedit iste error est dolorum ad, ipsam laboriosam blanditiis perspiciatis nesciunt sed vitae velit, commodi quidem, nam quod voluptatibus ab veniam?
+            </span>
+        </span>
+    </p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia accusamus iure illo rerum sapiente delectus velit vero? Perferendis dolores tempore voluptas ex fugit! Consectetur minima, velit amet animi voluptate eos.</p>
+    <p>
+    <img src="/00_Images/features.jpeg" alt="" width="50px">
+    <span>
+    Resim Buradan Başlıyor ipsum dolor sit amet consectetur adipisicing elit. Eius quos eligendi laborum suscipit dicta repudiandae facilis laboriosam eos. Sequi quos voluptatem, ipsa quia ut ad iusto quasi placeat nemo veniam.
+    </span>
+    <span>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos enim facere ab quaerat inventore minima dolores exercitationem veniam nihil, deleniti tempore, voluptatum cupiditate in sit iusto sint hic sequi natus.
+        <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur impedit iste error est dolorum ad, ipsam laboriosam blanditiis perspiciatis nesciunt sed vitae velit, commodi quidem, nam quod voluptatibus ab veniam?
+        </span>
+    </span>
+</p>
+</body>
+</html>

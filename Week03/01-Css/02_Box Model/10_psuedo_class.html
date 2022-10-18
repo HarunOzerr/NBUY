@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psuedo Classes</title>
+    <style>
+        a{
+            border: 1px solid gray;
+            text-decoration: none;
+            padding: 5px 8px;
+            display: inline-block;
+            width: 70px;
+            text-align: center;
+        }
+        /* Link verilmiş olan hreflere style verilir. */
+        a:link{
+            background-color: white;
+            color: black;
+        }
+        /* Ziyaret edilen href belirtilen style'da gösterilir. */
+        /* a:visited{
+            color: orange;
+        } */
+        /* hreflerin üstüne gelindiğinde verilen style gösterilir. Örneğin renk kırmızı yapılırsa üstüne gelindiğinde kırmızı olur. */
+        a:hover{
+            color:white;
+            background-color: black;
+        }
+        /* aktif olan yerde belirlenen style'lar çalışıyor. */
+        /* a:active{
+            color: white;
+            background-color: tomato;
+        } */
+        div:hover p{
+            display: block;
+        }
+        p{
+            display: none;
+        }
+        /* 4 classta kullanılacaksa bu sırada kullanılmalı. link-visited-hover-active */
+    </style>
+</head>
+<body>
+    <a href="03_border.html">Border</a>
+    <a href="06_navbar.html">Navbar</a>
+    <a href="07_styling-list.html">Styling</a>
+    <br><br>
+    <div>
+        Üzerime gelsene.
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sunt, nisi dolorum eligendi dolore unde id, earum ratione at pariatur tempora ipsa perferendis, recusandae et.</p>
+    </div>
+</body>
+</html>

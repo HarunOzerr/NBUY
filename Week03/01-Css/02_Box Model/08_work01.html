@@ -32,15 +32,46 @@
         .main-header-nav-bar{
             text-align: center;
         }
-        
+        .main-header-nav-bar-items {
+            list-style-type: none;
+        }
+        .main-header-nav-bar-item{
+            display: inline-block;
+            width: 140px;
+            background-color: rgb(4, 65, 179);
+            height: 50px;
+            padding: 15px;
+            margin-right: 25px;
+        }
+        .main-header-nav-bar-item a{
+            color:white;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .main-img{
+            text-align: center;
+        }
 
     </style>
 </head>
 <body>
     <div id="container">
-        <header class="">
-
+        <header class="main-header">
+            <a href="#" class="main-header-logo">BenimSitem.com</a>
+            <nav class="main-header-nav-bar">
+                <ul class="main-header-nav-bar-items">
+                    <li class="main-header-nav-bar-item"><a href="#">Home</a></li>
+                    <li class="main-header-nav-bar-item"><a href="#">Products</a></li>
+                    <li class="main-header-nav-bar-item"><a href="#">Categories</a></li>
+                    <li class="main-header-nav-bar-item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
         </header>
+        <section>
+            <div class="main-img">
+                <img src="https://picsum.photos/200/300" alt="">
+            </div>
+        </section>
     </div>
 </body>
 </html>
