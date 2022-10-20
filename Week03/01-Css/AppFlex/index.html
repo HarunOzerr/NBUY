@@ -1,16 +1,22 @@
+<!--
+    Responsive olarak uygun hale getir.
+    Kategoriler terse çevrilmişti normal haline getir. 
+    Mesela Frontend dersleri sayfanın altında gözüksün.
+    Mesela sağdaki menüler sayfa küçülünce ortada üstte gözüksün.
+-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Units</title>
+    <title>Flex Box 01</title>
     <style>
- body {
+        body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
-            font-size:10px;
         }
 
         .container {
@@ -19,8 +25,7 @@
             flex-direction: column;
         }
 
-        .header,
-        .footer {
+        .header, .footer {
             background-color: #002B5B;
             padding-left: 20px;
             height: 120px;
@@ -28,37 +33,32 @@
             align-items: center;
         }
 
-        .footer {
+        .footer{
             height: 60px;
-            color: #fff;
-
+            color:#fff;
         }
 
-        .header {
-            font-size: 20px;
-        }
 
         .header h1 {
             color: #FEC260;
-            font-size: 1rem;
+            font-size:60px;
         }
 
         .content {
             display: flex;
-            flex-direction: row-reverse;
-            margin-top: 10px;
+            flex-direction: row;
+            margin-top:10px;
             height: calc(100vh - 210px);
         }
 
         .content-left {
             width: 25%;
-
         }
 
         .content-left ul {
             list-style-type: none;
             padding: 0;
-            margin: 0;
+            margin:0;
         }
 
         .content-left ul li {
@@ -66,7 +66,6 @@
             margin-bottom: 8px;
             background-color: #256D85;
             color: #fff;
-
         }
 
         .content-left ul li:hover {
@@ -76,17 +75,30 @@
 
         .content-right {
             width: 75%;
-            padding-right: 15px;
-
+            padding-left:15px;
+        }
+        .content-right h1{
+            margin:0;
+            color: #002B5B;
         }
 
-        .content-right h1 {
-            margin: 0;
-            color: #002B5B;
-
+        @media (max-width:660px){
+            .header h1{
+                font-size: 40px;
+            }
+            .fotter{
+                order: 2 !important;
+                margin-bottom: 10px;
+            }
+            .content{
+                order: 1 !important;
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -97,12 +109,14 @@
                 <ul>
                     <li>Html</li>
                     <li>Css</li>
-                    <li>Javascript</li>
+                    <li>JavaScript</li>
                 </ul>
             </div>
             <div class="content-right">
                 <h1>Uygulama Geliştirici Eğitimi</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur facere eius fuga aliquid impedit commodi ipsam suscipit reprehenderit architecto autem corporis rem vero, ipsa tenetur molestias optio sequi nemo! Beatae.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fuga eum magni doloremque,
+                    cupiditate facere minus odio nemo exercitationem! Qui placeat optio voluptate quidem autem possimus
+                    ratione neque accusantium laborum?</p>
             </div>
         </div>
         <div class="footer">
@@ -110,4 +124,5 @@
         </div>
     </div>
 </body>
+
 </html>
