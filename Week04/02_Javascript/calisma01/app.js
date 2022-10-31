@@ -55,14 +55,22 @@ NOT: Kod her türlü n değeri için çalışmalıdır, sabit bir sayı değildi
 // }
 
 // -------------------------- 2. ÇÖZÜM -----------------------
-let n = prompt('Bir sayı giriniz.')
+// let n = prompt('Bir sayı giriniz.')
 
-nextPrime:
-for (let i = 2; i <= n; i++) {
-    for (let j = 2; j < i; j++) {
-        if (i % j === 0) {
-            continue nextPrime;           
-        }
-    }
-    console.log(i);
+// nextPrime:
+// for (let i = 2; i <= n; i++) {
+//     for (let j = 2; j < i; j++) {
+//         if (i % j === 0) {
+//             continue nextPrime; // nextPrime olarak belirlenen satıra geri döner. Kod bloğunu o satırdan tekrar başlatır.        
+//         }
+//     }
+//     console.log(i);
+// }
+
+let yil = prompt('Bir yıl giriniz.');
+if (yil % 4 == 0 && yil % 100 == 0 ) {
+    console.log(object);
 }
+
+
+
