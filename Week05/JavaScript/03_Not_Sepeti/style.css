@@ -27,11 +27,9 @@ body{
     vertical-align: middle;
 }
 
-#not-list input{
+input{
     width: 650px;
-    height: 40px;
-    padding-top: 20px;
-
+    height: 50px;;
 }
 
 button{
@@ -49,21 +47,21 @@ button{
 }
 
 #completeButton{
-    height: 63.5px;
+    height: 56px;
     width: 48px;
     position: relative;
     background-color: chocolate;
-    bottom: 7px;
     right: 6.5px;
+    top: 2.5px;
 }
 
 #deleteButton{
-    height: 62.5px;
+    height: 56px;
     width: 48px;
     position: relative;
     background-color: darkred;
-    bottom: 8.5px;
     right: 12px;
+    top: 1px;
 }
 
 li{
