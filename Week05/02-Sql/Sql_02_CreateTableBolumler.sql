@@ -1,0 +1,15 @@
+USE SampleDb
+
+CREATE TABLE Bolumler(
+	id INT NOT NULL,
+	ad NVARCHAR(30)
+)
+
+DROP TABLE Bolumler
+
+USE SampleDb
+CREATE TABLE Bolumler(
+	id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	ad NVARCHAR(50),
+	aciklama NVARCHAR(MAX)
+)
