@@ -67,6 +67,7 @@
 --WHERE P.ProductName = 'Chai' AND O.ShipCountry = 'Germany'
 
 --Ernst Handel adlý müþterisine yapýlan satýþ tutarýnýn toplamý
+USE Northwind
 SELECT SUM(OD.UnitPrice* OD.Quantity) 
 FROM [Order Details] OD INNER JOIN Orders O
 ON OD.OrderID = O.OrderID INNER JOIN Customers C
