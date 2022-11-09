@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week06\\DotNetCore-VeriTabanıİşlemleri\\P01_SqlBaglantiOlusturma\\P01_SqlBaglantiOlusturma.csproj": {}
+    "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week06\\DotNetCore-VeriTabanıİşlemleri\\Proje04_VeriErisimSinifi\\Proje04_VeriErisimSinifi.csproj": {}
   },
   "projects": {
-    "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week06\\DotNetCore-VeriTabanıİşlemleri\\P01_SqlBaglantiOlusturma\\P01_SqlBaglantiOlusturma.csproj": {
+    "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week06\\DotNetCore-VeriTabanıİşlemleri\\Proje04_VeriErisimSinifi\\Proje04_VeriErisimSinifi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week06\\DotNetCore-VeriTabanıİşlemleri\\P01_SqlBaglantiOlusturma\\P01_SqlBaglantiOlusturma.csproj",
-        "projectName": "P01_SqlBaglantiOlusturma",
-        "projectPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week06\\DotNetCore-VeriTabanıİşlemleri\\P01_SqlBaglantiOlusturma\\P01_SqlBaglantiOlusturma.csproj",
+        "projectUniqueName": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week06\\DotNetCore-VeriTabanıİşlemleri\\Proje04_VeriErisimSinifi\\Proje04_VeriErisimSinifi.csproj",
+        "projectName": "Proje04_VeriErisimSinifi",
+        "projectPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week06\\DotNetCore-VeriTabanıİşlemleri\\Proje04_VeriErisimSinifi\\Proje04_VeriErisimSinifi.csproj",
         "packagesPath": "C:\\Users\\SABAH\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week06\\DotNetCore-VeriTabanıİşlemleri\\P01_SqlBaglantiOlusturma\\obj\\",
+        "outputPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week06\\DotNetCore-VeriTabanıİşlemleri\\Proje04_VeriErisimSinifi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,7 +42,7 @@
           "dependencies": {
             "System.Data.SqlClient": {
               "target": "Package",
-              "version": "[4.8.4, )"
+              "version": "[4.8.5, )"
             }
           },
           "imports": [

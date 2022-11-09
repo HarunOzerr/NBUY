@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week06\\DotNetCore-VeriTabanıİşlemleri\\P01_SqlBaglantiOlusturma\\P01_SqlBaglantiOlusturma.csproj": {}
+    "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week06\\DotNetCore-VeriTabanıİşlemleri\\Proje03_VerilerinNesneyleTasinmasi\\Proje03_VerilerinNesneyleTasinmasi.csproj": {}
   },
   "projects": {
-    "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week06\\DotNetCore-VeriTabanıİşlemleri\\P01_SqlBaglantiOlusturma\\P01_SqlBaglantiOlusturma.csproj": {
+    "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week06\\DotNetCore-VeriTabanıİşlemleri\\Proje03_VerilerinNesneyleTasinmasi\\Proje03_VerilerinNesneyleTasinmasi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week06\\DotNetCore-VeriTabanıİşlemleri\\P01_SqlBaglantiOlusturma\\P01_SqlBaglantiOlusturma.csproj",
-        "projectName": "P01_SqlBaglantiOlusturma",
-        "projectPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week06\\DotNetCore-VeriTabanıİşlemleri\\P01_SqlBaglantiOlusturma\\P01_SqlBaglantiOlusturma.csproj",
+        "projectUniqueName": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week06\\DotNetCore-VeriTabanıİşlemleri\\Proje03_VerilerinNesneyleTasinmasi\\Proje03_VerilerinNesneyleTasinmasi.csproj",
+        "projectName": "Proje03_VerilerinNesneyleTasinmasi",
+        "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week06\\DotNetCore-VeriTabanıİşlemleri\\Proje03_VerilerinNesneyleTasinmasi\\Proje03_VerilerinNesneyleTasinmasi.csproj",
         "packagesPath": "C:\\Users\\SABAH\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week06\\DotNetCore-VeriTabanıİşlemleri\\P01_SqlBaglantiOlusturma\\obj\\",
+        "outputPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week06\\DotNetCore-VeriTabanıİşlemleri\\Proje03_VerilerinNesneyleTasinmasi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,7 +42,7 @@
           "dependencies": {
             "System.Data.SqlClient": {
               "target": "Package",
-              "version": "[4.8.4, )"
+              "version": "[4.8.5, )"
             }
           },
           "imports": [
