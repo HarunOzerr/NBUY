@@ -8,10 +8,10 @@ namespace Proje05_KatmanliMimari.DataAccessLayer
 {
     public interface ICustomerDAL
     {
-        void CreateCustomer(Customer customer);
-        List<Customer> GettAllCustomers();
-        Customer GetByCustomerId(int Id);
-        void UpdateCustomer(Customer customer);
-        void deleteCustomer(int id);
+        void Create(Customer customer);
+        List<Customer> GettAll();
+        Customer GetById(int Id);
+        void Update(Customer customer);
+        void delete(int id);
     }
 }

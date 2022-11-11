@@ -15,22 +15,22 @@ namespace Proje05_KatmanliMimari.DataAccessLayer
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             return sqlConnection;
         }
-        public void CreateCustomer(Customer customer)
+        public void Create(Customer customer)
         {
             throw new NotImplementedException();
         }
 
-        public void deleteCustomer(int id)
+        public void delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Customer GetByCustomerId(int Id)
+        public Customer GetById(int Id)
         {
             throw new NotImplementedException();
         }
 
-        public List<Customer> GettAllCustomers()
+        public List<Customer> GettAll()
         {
             List<Customer> customers = new List<Customer>();
             using (var connection = GetSqlConnection())
@@ -52,7 +52,7 @@ namespace Proje05_KatmanliMimari.DataAccessLayer
                     }
                     sqlDataReader.Close();
                 }
-                catch (System.Exception)
+                catch (Exception)
                 {
                     Console.WriteLine("Bir Hata Oluştu!");
                 }
@@ -64,7 +64,7 @@ namespace Proje05_KatmanliMimari.DataAccessLayer
             return customers;
         }
 
-        public void UpdateCustomer(Customer customer)
+        public void Update(Customer customer)
         {
             throw new NotImplementedException();
         }

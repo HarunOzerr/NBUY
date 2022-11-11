@@ -12,22 +12,22 @@ class Program
        do
        {
         Console.Clear();
-        Console.WriteLine("1 - Products");
-        Console.WriteLine("2 - Customers");
+        Console.WriteLine("Choose Database->");
+        Console.WriteLine("1 - MsSql");
+        Console.WriteLine("2 - Sqlite");
         Console.WriteLine("0 - Exit");
         Console.Write("Seçiminizi Giriniz:");
         secim = Convert.ToInt32(Console.ReadLine());
-        // List<Customer> customers = GetAllCustomers();
         if (secim == 1)
         {
-            ProductList();
+            Menu(secim);
             Console.ReadLine();
         }
-        // else if(secim == 2)
-        // {
-        //     CustomerList();
-            // Console.ReadLine();
-        // }
+        else if(secim == 2)
+        {
+            Menu(secim);
+            Console.ReadLine();
+        }
         else if (secim != 0)
         {
             Console.WriteLine("Lütfen geçerli bir seçim yapınız!");
@@ -35,54 +35,55 @@ class Program
         }
        } while (secim != 0);
     }
-    static void ProductList()
+    static void Menu(int dbType)
     {
-        ProductManager productManager = new ProductManager(new SqliteProductDAL());
+        string dbName = dbType==1 ? "MsSql" : "SqLite";
+        Console.Clear();
+        Console.WriteLine($"By {dbName} Database - NorthWind");
+        Console.WriteLine("-----------------------------");
+        Console.WriteLine("1- Product List");
+        Console.WriteLine("2- Customer List");
+        Console.Write("Seçim Yapınız: ");
+        int secim = int.Parse(Console.ReadLine());
+        if (secim == 1)
+        {
+            if(dbType == 1)
+            {
+            ProductList(new SqlProductDAL());
+            }
+            else
+            {
+            ProductList(new SqliteProductDAL());    
+            }
+        }
+        else if (secim == 2)
+        {
+            if (dbType==1)
+            {
+                CustomerList(new SqlCustomerDAL());
+            }
+            else
+            {
+                CustomerList(new SqliteCustomerDAL());
+            }
+        }
+    }
+    static void ProductList(IProductDAL productDAL)
+    {
+        ProductManager productManager = new ProductManager(productDAL);
         List<Product> products = productManager.GetAllProducts();
         foreach (var product in products)
         {
             Console.WriteLine($"Id: {product.Id}, Name: {product.Name}, Price: {product.Price}, Stock: {product.Stock}");
         }
     }
-    // static void CustomerList()
-    // {
-    //     List<Customer> customers = GetAllCustomers();
-    //     foreach (var customer in customers)
-    //     {
-    //         Console.WriteLine($"Id: {customer.Id}, Company Name: {customer.CompanyName}, Contact Name: {customer.ContactName}, Country: {customer.Country}");
-    //     }
-    // }
-    // static List<Customer> GetAllCustomers()
-    // {
-    //     List<Customer> customers = new List<Customer>();
-    //     using (var connection = GetSqlConnection())
-    //     {
-    //         try
-    //         {
-    //         connection.Open();
-    //         string queryString = "SELECT CustomerID, CompanyName, ContactName, Country FROM Customers";
-    //         SqlCommand sqlCommand = new SqlCommand(queryString, connection);
-    //         SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-    //         while (sqlDataReader.Read())
-    //         {
-    //             customers.Add(new Customer {
-    //                 Id = sqlDataReader["CustomerID"].ToString(), //String olarak belirterekte index sayısı vermeden hangi satırdan alacağını belirtebiliriz.
-    //                 CompanyName = sqlDataReader["CompanyName"].ToString(),
-    //                 ContactName = sqlDataReader[2].ToString(),
-    //                 Country = sqlDataReader[3].ToString()
-    //             });
-    //         }
-    //         sqlDataReader.Close();
-    //         }
-    //         catch (Exception)
-    //         {
-    //             Console.WriteLine("Bir sorun oluştu!");
-    //         }
-    //         finally
-    //         {
-    //             connection.Close();
-    //         }
-    //     }
-    //     return customers;
-    // }
+    static void CustomerList(ICustomerDAL customerDAL)
+    {
+        CustomerManager customerManager = new CustomerManager(customerDAL);
+        List<Customer> customers = customerManager.GettAllCustomers();
+        foreach (var customer in customers)
+        {
+            Console.WriteLine($"Id: {customer.Id}, Company Name: {customer.CompanyName}, Contact Name: {customer.ContactName}, Country: {customer.Country}");
+        }
+    }
 }
