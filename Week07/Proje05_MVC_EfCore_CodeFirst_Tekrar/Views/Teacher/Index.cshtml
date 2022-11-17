@@ -1,0 +1,18 @@
+@model List<Teacher>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="display-4">Teacher List</h1>
+<hr>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            @foreach (var t in Model)
+            {
+                <th>@t.Id</th>
+
+            }
+        </tr>
+    </thead>
+</table>

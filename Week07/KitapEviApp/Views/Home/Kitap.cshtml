@@ -1,0 +1,33 @@
+@model List<Kitap>
+@{
+    ViewData["Title"] = "Kitap";
+}
+
+<h1 class="display-3 text-center">Kitaplar</h1>
+<hr>
+<table class="table table-border">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Ad</th>
+            <th>Basım Yılı</th>
+            <th>Sayfa Sayısı</th>
+            <th>Kategorisi</th>
+            <th>Yazarı</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var k in Model)
+        {
+            <tr>
+                <td>@k.Id</td>
+                <td>@k.Ad</td>
+                <td>@k.BasimYili</td>
+                <td>@k.SayfaSayisi</td>
+                <td>@k.Kategori.Ad</td>
+                <td>@k.Yazar.Ad</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
