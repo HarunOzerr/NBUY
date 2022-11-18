@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "YasGrubu";
+}
+
+<h1>Yaş Grubu Hesaplama</h1>
+<hr>
+<form asp-controller = "Home" method="post">
+    <label class="form-label">Yaş:</label>
+    <input class="form-control" type="text" name="yas">
+    <label class="form-label">Ad:</label>
+    <input class="form-control" type="text" name="ad">
+    <input type="submit" value="Hesapla" class="btn btn-primary mt-3">
+</form>
+@if (ViewBag.YasGrubu != null)
+{
+    <div class="alert alert-success mt-3">@ViewBag.YasGrubu</div>   
+}

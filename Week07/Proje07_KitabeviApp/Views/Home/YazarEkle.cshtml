@@ -1,0 +1,41 @@
+@model Yazar
+@{
+    ViewData["Title"] = "YazarEkle";
+}
+<h1 class="display-6">Yeni Yazar Ekle</h1>
+<hr>
+<form action="" method="post">
+    <div class="row mb-2">
+        <div class="col-2">
+            <label class="form-label" asp-for = "@Model.Ad"></label>
+        </div>
+        <div class="col-4">
+            <input class="form-control" type="text" asp-for = "@Model.Ad">
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-2">
+            <label class="form-label">Doğum Yılı</label>
+        </div>
+        <div class="col-4">
+            <input class="form-control" type="text" asp-for = "@Model.DogumYili">
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-2">
+            <label class="form-label" asp-for = "@Model.Cinsiyet"></label>
+        </div>
+        <div class="col-4">
+            <input class="form-control" type="text" asp-for = "@Model.Cinsiyet">
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-4 offset-2">
+            <button class="btn btn-primary">Ekle</button>
+        </div>
+    </div>
+
+</form>
