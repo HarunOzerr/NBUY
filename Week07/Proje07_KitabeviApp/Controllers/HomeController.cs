@@ -77,5 +77,15 @@ public class HomeController : Controller
         context.SaveChanges();
         return RedirectToAction("YazarListesi");
     }
+    public IActionResult KitapEkle()
+    {
+        ViewBag.Kategoriler = context.Kategoriler.ToList();
+        return View();
+    }
+    [HttpPost]
+    public IActionResult KitapEkle(Kitap kitap)
+    {
+        return View();
+    }
 }
 
