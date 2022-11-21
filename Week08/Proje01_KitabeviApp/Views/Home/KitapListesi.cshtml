@@ -1,0 +1,43 @@
+@model List<Kitap>
+@{
+    ViewData["Title"] = "Kitap Listesi";
+}
+
+<h1 class="display-6">Kitap Listesi</h1>
+<hr>
+<a asp-controller="Home" asp-action="KitapEkle" class="btn btn-outline-primary">Yeni Kitap</a>
+<hr>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Yazar Adı</th>
+            <th>Basım Yılı</th>
+            <th>Sayfa Sayısı</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var kitap in Model)
+        {
+            <tr>            
+                <td>@kitap.Ad</td>
+                <td>@kitap.BasimYili</td>
+                <td>@kitap.Yazar.Ad</td>
+                <td>
+                    <a asp-controller="Home" asp-action="Detay" asp-route-id=@kitap.Id class="btn btn-sm btn-info">İncele</a>
+                    <a class="btn btn-sm btn-success">Sepete Ekle</a>
+                    <a class="btn btn-sm btn-warning" asp-controller ="Home" asp-action="KitapGuncelle" asp-route-id=@kitap.Id>Güncelle</a>
+                    <a class="btn btn-sm btn-danger" asp-controller="Home" asp-action="KitapSil" asp-route-id=@kitap.Id>Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@* <div class="container">
+    <div class="row">
+        @foreach (var kitap in Model)
+        {
+            <partial name="_Kitap" model="kitap" />
+        }
+    </div>
+</div> *@

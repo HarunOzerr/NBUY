@@ -108,4 +108,3 @@ C:\Users\SABAH\Documents\GitHub\NBUY\Week07\KitabeviApp\obj\Debug\net6.0\refint\
 C:\Users\SABAH\Documents\GitHub\NBUY\Week07\KitabeviApp\obj\Debug\net6.0\KitabeviApp.pdb
 C:\Users\SABAH\Documents\GitHub\NBUY\Week07\KitabeviApp\obj\Debug\net6.0\KitabeviApp.genruntimeconfig.cache
 C:\Users\SABAH\Documents\GitHub\NBUY\Week07\KitabeviApp\obj\Debug\net6.0\ref\KitabeviApp.dll
-C:\Users\SABAH\Documents\GitHub\NBUY\Week07\KitabeviApp\bin\Debug\net6.0\global.json

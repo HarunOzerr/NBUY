@@ -54,9 +54,10 @@ public class HomeController : Controller
             .FirstOrDefault();
         return View(kitap);
     }
+    
     public IActionResult Get(int id, string ad)
     {
-        
+
         return View();
     }
 }

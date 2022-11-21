@@ -1,0 +1,79 @@
+@model Kitap
+@{
+    ViewData["Title"] = "Kitap Sil";
+}
+
+<h1 class="display-6">KİTAP SİLİNECEK! EMİN MİSİN?</h1>
+<hr>
+<form asp-controller="Home" asp-action="KitapSil" method="post">
+    <div class="row mb-2">
+        <div class="col-2">
+            <label class="form-label" asp-for="Ad"></label>
+        </div>
+        <div class="col-4">
+            <input class="form-control" type="text" asp-for="Ad" disabled>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-2">
+            <label class="form-label" asp-for="BasimYili"></label>
+        </div>
+        <div class="col-4">
+            <input class="form-control" type="text" asp-for="BasimYili" disabled>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-2">
+            <label class="form-label" asp-for="SayfaSayisi"></label>
+        </div>
+        <div class="col-4">
+            <input class="form-control" type="text" asp-for="SayfaSayisi" disabled>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-2">
+            <label class="form-label" asp-for="Ozet"></label>
+        </div>
+        <div class="col-4">
+            <input class="form-control" type="text" asp-for="Ozet" disabled>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-2">
+            <label class="form-label">Kategori</label>
+        </div>
+        <div class="col-4">
+            <select asp-for="KategoriId" class="form-select" aria-label="Default select example">
+                <option selected disabled>Kategori seçiniz</option>
+                @foreach (var kategori in ViewBag.Kategoriler)
+                {
+                    <option value="@kategori.Id" disabled>@kategori.Ad</option>
+                }
+
+            </select>
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-2">
+            <label class="form-label">Yazar</label>
+        </div>
+        <div class="col-4">
+            <select asp-for="YazarId" class="form-select" aria-label="Default select example">
+                <option selected disabled>Yazar seçiniz</option>
+                @foreach (var yazar in ViewBag.Yazarlar)
+                {
+                    <option value="@yazar.Id" disabled>@yazar.Ad</option>
+                }
+
+            </select>
+        </div>
+    </div>
+
+    
+    <div class="row mb-2">
+        <div class="col-6 d-grid">
+            <input class="btn btn-primary" type="submit" value="Sil">
+        </div>
+    </div>
+</form>
