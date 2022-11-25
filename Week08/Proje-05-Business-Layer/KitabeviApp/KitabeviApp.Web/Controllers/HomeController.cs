@@ -48,7 +48,8 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult KategoriEkle(Kategori kategori)
     {
-        kategoriRepository.KategoriEkle(kategori);
+        var kategoriManager = new KategoriManager();
+        kategoriManager.KategoriEkle(kategori);
         return RedirectToAction("KategoriListesi");
     }
     public IActionResult KategoriSil(int id)
@@ -59,7 +60,8 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult KategoriSil(Kategori kategori)
     {
-        kategoriRepository.KategoriSil(kategori);
+        var kategoriManager = new KategoriManager();
+        kategoriManager.KategoriSil(kategori);
         return RedirectToAction("KategoriListesi");
     }
     public IActionResult KategoriGuncelle(int id)

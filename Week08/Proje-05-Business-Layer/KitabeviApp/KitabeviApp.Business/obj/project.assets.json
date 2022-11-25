@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net7.0": {
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -554,7 +554,7 @@
       },
       "KitabeviApp.Data/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "KitabeviApp.Entity": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "6.0.11",
@@ -569,7 +569,7 @@
       },
       "KitabeviApp.Entity/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "compile": {
           "bin/placeholder/KitabeviApp.Entity.dll": {}
         },
@@ -1250,7 +1250,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0": [
+    "net7.0": [
       "KitabeviApp.Data >= 1.0.0"
     ]
   },
@@ -1260,29 +1260,29 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week08\\Proje04\\KitabeviApp\\KitabeviApp.Business\\KitabeviApp.Business.csproj",
+      "projectUniqueName": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week08\\Proje-05-Business-Layer\\KitabeviApp\\KitabeviApp.Business\\KitabeviApp.Business.csproj",
       "projectName": "KitabeviApp.Business",
-      "projectPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week08\\Proje04\\KitabeviApp\\KitabeviApp.Business\\KitabeviApp.Business.csproj",
+      "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week08\\Proje-05-Business-Layer\\KitabeviApp\\KitabeviApp.Business\\KitabeviApp.Business.csproj",
       "packagesPath": "C:\\Users\\SABAH\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week08\\Proje04\\KitabeviApp\\KitabeviApp.Business\\obj\\",
+      "outputPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week08\\Proje-05-Business-Layer\\KitabeviApp\\KitabeviApp.Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "projectReferences": {
-            "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week08\\Proje04\\KitabeviApp\\KitabeviApp.Data\\KitabeviApp.Data.csproj": {
-              "projectPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week08\\Proje04\\KitabeviApp\\KitabeviApp.Data\\KitabeviApp.Data.csproj"
+            "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week08\\Proje-05-Business-Layer\\KitabeviApp\\KitabeviApp.Data\\KitabeviApp.Data.csproj": {
+              "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week08\\Proje-05-Business-Layer\\KitabeviApp\\KitabeviApp.Data\\KitabeviApp.Data.csproj"
             }
           }
         }
@@ -1294,8 +1294,8 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net7.0": {
+        "targetAlias": "net7.0",
         "imports": [
           "net461",
           "net462",
@@ -1312,7 +1312,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -12,17 +12,20 @@ namespace KitabeviApp.Business.Concrete
     {
         public void KategoriEkle(Kategori kategori)
         {
-            throw new NotImplementedException();
+            var kategoriRepository = new EfCoreKategoriRepository();
+            kategoriRepository.KategoriEkle(kategori);
         }
 
         public void KategoriGuncelle(Kategori kategori)
         {
-            throw new NotImplementedException();
+            var kategoriRepository = new EfCoreKategoriRepository();
+            kategoriRepository.KategoriGuncelle(kategori);
         }
 
         public Kategori KategoriId(int id)
         {
-            throw new NotImplementedException();
+            var kategoriRepository = new EfCoreKategoriRepository();
+            return kategoriRepository.KategoriId(id);
         }
 
         public List<Kategori> KategoriListele()
@@ -33,7 +36,8 @@ namespace KitabeviApp.Business.Concrete
 
         public void KategoriSil(Kategori kategori)
         {
-            throw new NotImplementedException();
+            var kategoriRepository = new EfCoreKategoriRepository();
+            kategoriRepository.KategoriSil(kategori);
         }
     }
 }
