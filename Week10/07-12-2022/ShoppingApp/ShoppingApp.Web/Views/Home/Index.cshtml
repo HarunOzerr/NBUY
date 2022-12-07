@@ -1,43 +1,19 @@
-﻿@using ShoppingApp.Web.Models.Dtos;
+﻿@using ShoppingApp.Web.Models.Dtos
 @model List<ProductDto> //Index action'ından return edilen veriyi burada model ile karşılıyoruz.
 @{
     ViewData["Title"] = "Home Page";
 }
 
-
 <div class="text-center">
-    <h1 class="display-4">Ürünler</h1>
+    <h1 class="display-4">Welcome ShoppingApp</h1>
 </div>
-@*<div>
-    <table class="table table-bordered">
-        <thead>
-        </thead>
-        <tbody>
-            @foreach (var productDto in Model)
-            {
-                <tr>
-                    <td>@productDto.Id</td>
-                    <td>@productDto.Name</td>
-                    <td>@productDto.Price</td>
-                    <td>@productDto.DateAdded</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-</div>*@
-<div class="row">
-    @foreach (var productDto in Model)
-    {
-        <div class="col-4 mb-5">
-            <div class="card-header bg-dark text-center">
-                <h1 class="display-6 fs-3 text-white">@productDto.Name</h1>
+<div class="mt-4">
+    <div class="row">
+        @foreach (var productDto in Model)
+        {
+            <div class="col-md-4">
+                @await Html.PartialAsync("_ProductPartial", productDto)
             </div>
-            <div class="card-img text-center">
-                <h4 class="">Fiyat: @productDto.Price</h4>
-            </div>
-            <div>
-                <p class="card-footer bg-success text-white text-center">@productDto.DateAdded</p>
-            </div>
-        </div>
-    }
+        }
+    </div>
 </div>

@@ -1,4 +1,5 @@
-﻿using ShoppingApp.Data.Abstract;
+﻿using Microsoft.EntityFrameworkCore;
+using ShoppingApp.Data.Abstract;
 using ShoppingApp.Data.Concrete.EfCore.Contexts;
 using ShoppingApp.Entity.Concrete;
 using System;

@@ -18,8 +18,8 @@ public class HomeController : Controller
     public async Task<IActionResult> Index()
     {
         //products değişkenine bütün productları alabileceğimiz GetAllAsync ile productları aktarmış olduk.
-        List<Product> products = await _productManager.GettAllAsync();
-        List<ProductDto> productDtos= new List<ProductDto>();
+        List<Product> products = await _productManager.GetHomePageProductsAsync();
+        List<ProductDto> productDtos = new List<ProductDto>();
         foreach (var product in products)
         {
             productDtos.Add(new ProductDto
@@ -27,9 +27,9 @@ public class HomeController : Controller
                 Id = product.Id,
                 Name = product.Name,
                 Price = product.Price,
-                DateAdded = product.DateAdded
+                DateAdded = product.DateAdded,
             });
         }
-        return View(productDtos);//Index'e products değişkenindeki verileri döndürdük.
+        return View(productDtos); //Index'e products değişkenindeki verileri döndürdük.
     }
 }

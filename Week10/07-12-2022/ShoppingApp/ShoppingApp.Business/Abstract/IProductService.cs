@@ -16,5 +16,6 @@ namespace ShoppingApp.Business.Abstract
         void Delete(Product product);
         List<Product> GetProductsByCategory();
         Task<List<Product>> GetHomePageProductsAsync();
+
     }
 }
