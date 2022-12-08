@@ -1,0 +1,18 @@
+﻿@using ShoppingApp.Web.Models.Dtos;
+@model ProductDetailsDto
+<div class="row">
+        <div class="col-5">
+                <img src="/images/@Model.ImageUrl" width="250" />
+        </div>
+        <div class="col-7">
+            <h1 class="display-1">@Model.Name</h1>
+            <h2>@Model.Description</h2>
+            <br>
+            <h3>Fiyat:@($"{Model.Price:C2}")</h3>
+            <br>
+            <div>
+                <a class="btn btn-primary btn-lg me-4">Satın Al</a>
+                <a class="btn btn-primary btn-lg">Sepete Ekle</a>
+            </div>
+        </div>
+</div>
