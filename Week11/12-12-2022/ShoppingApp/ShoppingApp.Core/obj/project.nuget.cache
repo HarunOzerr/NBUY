@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "u8LBnL8nwo+TBHQBKIvrtcZkKIjurlKji8Bn8n2dO3Ko04v8LK3rBVFMnv6pV1E8+4PpA31TJzOiLezgD6ABGA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week11\\12-12-2022\\ShoppingApp\\ShoppingApp.Core\\ShoppingApp.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SABAH\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\SABAH\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\SABAH\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
