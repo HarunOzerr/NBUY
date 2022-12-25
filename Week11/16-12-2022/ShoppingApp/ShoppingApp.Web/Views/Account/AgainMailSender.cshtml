@@ -1,0 +1,18 @@
+﻿@model RegisterDto
+
+<h1>Mail Gönder</h1>
+<hr />
+<form asp-controller="Account" asp-action="AgainMailSender" method="post">
+    <div class="row">
+        <div class="col-4">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input class="form-control" asp-for="Email">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Mail Gönder</button>
+            <a type="submit" class="btn btn-warning" asp-controller="Home" asp-action="Index">Vazgeç</a>
+        </div>
+    </div>
+</form>

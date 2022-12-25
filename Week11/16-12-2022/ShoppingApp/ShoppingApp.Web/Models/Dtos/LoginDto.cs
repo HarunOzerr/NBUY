@@ -9,6 +9,11 @@ namespace ShoppingApp.Web.Models.Dtos
         [Required(ErrorMessage ="{0} boş bırakalmamalı.")]
         public string UserName { get; set; }
 
+        [DisplayName("Email Adresi")]
+        [Required(ErrorMessage = "{0} boş bırakılmamalı.")]
+        [DataType(DataType.EmailAddress)]
+        public string Email { get; set; }
+
         [DisplayName("Şifre")]
         [Required(ErrorMessage = "{0} boş bırakalmamalı.")]
         [DataType(DataType.Password)]

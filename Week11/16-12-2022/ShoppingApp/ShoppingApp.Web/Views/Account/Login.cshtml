@@ -1,5 +1,9 @@
 ﻿@model LoginDto
-
+@if (ViewBag.MailOnay == false)
+{
+    <a asp-action="AgainMailSender" asp-controller="Account" class="btn btn-primary">Mail Gönder</a>
+}
+<hr />
 <h1>GİRİŞ YAP</h1>
 <hr />
 <form asp-controller="Account" asp-action="Login" method="post">
@@ -24,6 +28,7 @@
                 Asp-action="ForgotPassword"
             >Şifremi Unuttum</a>
             <a type="submit" class="btn btn-warning" asp-controller="Home" asp-action="Index">Vazgeç</a>
+
         </div>
     </div>
 </form>

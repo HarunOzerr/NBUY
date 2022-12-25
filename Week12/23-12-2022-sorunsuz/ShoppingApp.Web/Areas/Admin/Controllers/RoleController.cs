@@ -187,7 +187,14 @@ namespace ShoppingApp.Web.Areas.Admin.Controllers
             userRolesDto.RoleDetailsDto= roleDetailsDto;
             userRolesDto.Users = userRolesDtoInstance.Users;
             return View("UserRoles",userRolesDto);
+        }
 
+        public async Task<IActionResult> Delete(string id)
+        {
+            var role = await _roleManager.FindByIdAsync(id);
+            if (role == null) { return NotFound(); }
+            await _roleManager.DeleteAsync(role);
+            return RedirectToAction("Index");
         }
     }
 }

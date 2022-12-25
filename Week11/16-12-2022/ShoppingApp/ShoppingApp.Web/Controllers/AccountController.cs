@@ -4,6 +4,7 @@ using ShoppingApp.Core;
 using ShoppingApp.Entity.Concrete.Identity;
 using ShoppingApp.Web.EmailServices.Abstract;
 using ShoppingApp.Web.Models.Dtos;
+using System;
 
 namespace ShoppingApp.Web.Controllers
 {
@@ -41,6 +42,7 @@ namespace ShoppingApp.Web.Controllers
                 if (!await _userManager.IsEmailConfirmedAsync(user))
                 {
                     TempData["Message"] = Jobs.CreateMessage("Bilgi", "Hesabınız onaylanmamış. Lütfen mailinize gelen onay linkine tıklayarak hesabınızı onaylayınız.", "warning");
+                    ViewBag.MailOnay = false;
                     return View(loginDto);
                     //ÖDEV: Eğer hesap onaylı değilse burada kullanıcıya "Onay linki gönder" şeklinde bir buton gözüksün. Ve bu butona basıldığında tekrar onay maili gelsin.
                     //Bir tane url oluşturmalıyız. EmailSender ile send methodu kullanılmalı.
@@ -54,6 +56,33 @@ namespace ShoppingApp.Web.Controllers
                 ModelState.AddModelError("", "Kullanıcı adı ya da parola hatalı.");
             }
             return View(loginDto);
+        }
+
+        public IActionResult AgainMailSender()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> AgainMailSender(LoginDto loginDto)
+        {
+            var user = await _userManager.FindByEmailAsync(loginDto.Email);
+            if (user == null)
+            {
+                ModelState.AddModelError("", "Böyle bir email bulunamadı");
+                return View(loginDto);
+            }
+            var tokenCode = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            var url = Url.Action("ConfirmEmail", "Account", new
+            {
+                userId = user.Id,
+                token = tokenCode
+            });
+            await _emailSender.SendEmailAsync(user.Email, "ShoppingApp Hesap Onaylama", $"<h1>Merhaba</h1>" +
+            $"<p>Lütfen hesabınızı onaylamak için aşağıdaki linke tıklayınız</p>" +
+            $"<a href='http://localhost:5178{url}'>Onay linki</a>");
+            return RedirectToAction("Login", "Account");
         }
 
         public IActionResult Register()

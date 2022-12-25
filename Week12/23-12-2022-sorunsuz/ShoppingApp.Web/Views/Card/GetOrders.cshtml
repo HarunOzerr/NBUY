@@ -1,11 +1,9 @@
 ﻿@model List<OrderListDto>
-
 <h6 class="display-6">Siparişlerim</h6>
 <hr />
-
-<table class="table table-bordered">
+<table class="table table-bordered table-striped table-sm">
     <thead>
-        <tr>
+        <tr class="bg-danger text-white">
             <th>Sipariş No</th>
             <th>Tarih</th>
             <th>Sipariş Toplamı</th>
@@ -19,8 +17,11 @@
                 <td>@order.OrderNumber</td>
                 <td>@order.OrderDate.ToShortDateString()</td>
                 <td>@($"{order.TotalPrice():C0}")</td>
-                @await Html.PartialAsync("_ProductDetailPartial", order)
+                <td>
+                    @await Html.PartialAsync("_OrderDetailPartial",order)
+                </td>
             </tr>
         }
+
     </tbody>
 </table>

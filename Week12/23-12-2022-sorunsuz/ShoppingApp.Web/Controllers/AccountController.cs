@@ -226,7 +226,8 @@ namespace ShoppingApp.Web.Controllers
             if (result.Succeeded)
             {
                 TempData["Message"] = Jobs.CreateMessage("Başarılı!", "Profiliniz başarıyla kaydedilmiştir.", "success");
-
+                await _signInManager.RefreshSignInAsync(user);
+                return Redirect("/Account/Manage/" + user.UserName);
             }
 
             List<SelectListItem> genderList = new List<SelectListItem>();
