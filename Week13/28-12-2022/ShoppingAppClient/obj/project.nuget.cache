@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "s3Kal691/JCzKL1MUB1lq16kMNgq3S5KGWx5ZCdT1EOz4OCDGIQ69SrIAzigUJ6XGXYHOHB2H5kfK+C4zD2e/A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week13\\28-12-2022\\ShoppingAppClient\\ShoppingAppClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SABAH\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

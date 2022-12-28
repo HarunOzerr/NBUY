@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "OzelDersler.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "OzelDersler.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OzelDersler.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OzelDersler.Business.dll": {}
+        }
+      },
+      "OzelDersler.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "OzelDersler.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OzelDersler.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OzelDersler.Data.dll": {}
+        }
+      },
+      "OzelDersler.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/OzelDersler.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OzelDersler.Entity.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OzelDersler.Business/1.0.0": {
+      "type": "project",
+      "path": "../OzelDersler.Business/OzelDersler.Business.csproj",
+      "msbuildProject": "../OzelDersler.Business/OzelDersler.Business.csproj"
+    },
+    "OzelDersler.Data/1.0.0": {
+      "type": "project",
+      "path": "../OzelDersler.Data/OzelDersler.Data.csproj",
+      "msbuildProject": "../OzelDersler.Data/OzelDersler.Data.csproj"
+    },
+    "OzelDersler.Entity/1.0.0": {
+      "type": "project",
+      "path": "../OzelDersler.Entity/OzelDersler.Entity.csproj",
+      "msbuildProject": "../OzelDersler.Entity/OzelDersler.Entity.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "OzelDersler.Business >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\SABAH\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler\\OzelDersler\\OzelDersler.Web\\OzelDersler.Web.csproj",
+      "projectName": "OzelDersler.Web",
+      "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler\\OzelDersler\\OzelDersler.Web\\OzelDersler.Web.csproj",
+      "packagesPath": "C:\\Users\\SABAH\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler\\OzelDersler\\OzelDersler.Web\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler\\OzelDersler\\OzelDersler.Business\\OzelDersler.Business.csproj": {
+              "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler\\OzelDersler\\OzelDersler.Business\\OzelDersler.Business.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

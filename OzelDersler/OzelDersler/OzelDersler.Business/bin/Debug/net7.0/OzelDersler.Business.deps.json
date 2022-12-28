@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "OzelDersler.Business/1.0.0": {
+        "dependencies": {
+          "OzelDersler.Data": "1.0.0"
+        },
+        "runtime": {
+          "OzelDersler.Business.dll": {}
+        }
+      },
+      "OzelDersler.Data/1.0.0": {
+        "dependencies": {
+          "OzelDersler.Entity": "1.0.0"
+        },
+        "runtime": {
+          "OzelDersler.Data.dll": {}
+        }
+      },
+      "OzelDersler.Entity/1.0.0": {
+        "runtime": {
+          "OzelDersler.Entity.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OzelDersler.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OzelDersler.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OzelDersler.Entity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

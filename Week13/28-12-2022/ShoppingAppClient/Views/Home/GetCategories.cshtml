@@ -1,0 +1,35 @@
+﻿@model List<CategoryViewModel>
+@{
+    ViewData["Title"] = "Kategoriler";
+}
+
+<h1 class="display-6">Ürün Listesi</h1>
+
+<table class="table table-sm table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Kategori Adı</th>
+            <th>Açıklaması</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>
+                    <a class="btn btn-primary"
+                   asp-controller="Home"
+                   asp-action="GetCategory"
+                   asp-route-id="@item.Id">
+                        Detay
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
