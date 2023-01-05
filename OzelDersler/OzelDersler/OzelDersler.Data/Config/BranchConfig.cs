@@ -19,9 +19,35 @@ namespace OzelDersler.Data.Config
             builder.Property(b => b.Name).IsRequired();
             builder.Property(b => b.Name).HasMaxLength(50);
 
-            builder.Property(b => b.Url).IsRequired();
             builder.Property(b => b.Url).HasMaxLength(50);
 
+
+            builder.HasData(
+                new Branch
+                {
+                    Id = 1,
+                    Name= "Matematik",
+                    Url = "matematik"
+                },
+                new Branch
+                {
+                    Id = 2,
+                    Name = "Fizik",
+                    Url = "fizik"
+                },
+                new Branch
+                {
+                    Id = 3,
+                    Name = "Kimya",
+                    Url = "kimya"
+                },
+                new Branch
+                {
+                    Id = 4,
+                    Name = "Biyoloji",
+                    Url = "biyoloji"
+                }
+                );
         }
     }
 }
