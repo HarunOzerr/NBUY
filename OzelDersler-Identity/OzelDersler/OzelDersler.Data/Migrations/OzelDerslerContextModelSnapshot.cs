@@ -17,6 +17,108 @@ namespace OzelDersler.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.1");
 
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RoleId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetRoleClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserLogins", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RoleId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetUserRoles", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("AspNetUserTokens", (string)null);
+                });
+
             modelBuilder.Entity("OzelDersler.Entity.Concrete.Branch", b =>
                 {
                     b.Property<int>("Id")
@@ -63,298 +165,313 @@ namespace OzelDersler.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("OzelDersler.Entity.Concrete.Student", b =>
+            modelBuilder.Entity("OzelDersler.Entity.Concrete.Identity.Role", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("About")
-                        .IsRequired()
-                        .HasMaxLength(500)
+                    b.Property<string>("Id")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("DateOfRegistration")
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasMaxLength(35)
+                    b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasMaxLength(35)
+                    b.Property<string>("Name")
+                        .HasMaxLength(256)
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Url")
-                        .HasMaxLength(100)
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256)
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Students");
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasDatabaseName("RoleNameIndex");
+
+                    b.ToTable("AspNetRoles", (string)null);
 
                     b.HasData(
                         new
                         {
-                            Id = 1,
-                            About = "Matematik dersinde kendimi geliştirmek istiyorum.",
-                            DateOfRegistration = new DateTime(2023, 1, 5, 9, 53, 21, 504, DateTimeKind.Local).AddTicks(2477),
-                            FirstName = "Harun",
-                            LastName = "Özer",
-                            Url = "harun-ozer"
+                            Id = "06796fd6-2324-4de6-b311-b11d2fe5d562",
+                            Description = "Admin rolü",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = 2,
-                            About = "Fizik dersinde kendimi geliştirmek istiyorum.",
-                            DateOfRegistration = new DateTime(2023, 1, 5, 9, 53, 21, 504, DateTimeKind.Local).AddTicks(2480),
-                            FirstName = "Selami",
-                            LastName = "Sadak",
-                            Url = "selami-sadak"
+                            Id = "b7ca9bbb-62a1-4699-a36c-3ce3730cfccf",
+                            Description = "Student rolü",
+                            Name = "Student",
+                            NormalizedName = "STUDENT"
                         },
                         new
                         {
-                            Id = 3,
-                            About = "Biyoloji alanında kendimi geliştirmek istiyorum.",
-                            DateOfRegistration = new DateTime(2023, 1, 5, 9, 53, 21, 504, DateTimeKind.Local).AddTicks(2483),
-                            FirstName = "Yavuz",
-                            LastName = "Akduman",
-                            Url = "yavuz-akduman"
+                            Id = "6d10f245-978d-4a85-8d80-afcc64525f48",
+                            Description = "Teacher rolü",
+                            Name = "Teacher",
+                            NormalizedName = "TEACHER"
                         });
                 });
 
-            modelBuilder.Entity("OzelDersler.Entity.Concrete.StudentTeacher", b =>
+            modelBuilder.Entity("OzelDersler.Entity.Concrete.Identity.User", b =>
                 {
-                    b.Property<int>("StudentId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("TeacherId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("StudentId", "TeacherId");
-
-                    b.HasIndex("TeacherId");
-
-                    b.ToTable("StudentTeachers");
-
-                    b.HasData(
-                        new
-                        {
-                            StudentId = 1,
-                            TeacherId = 1
-                        },
-                        new
-                        {
-                            StudentId = 2,
-                            TeacherId = 1
-                        },
-                        new
-                        {
-                            StudentId = 1,
-                            TeacherId = 3
-                        },
-                        new
-                        {
-                            StudentId = 3,
-                            TeacherId = 2
-                        });
-                });
-
-            modelBuilder.Entity("OzelDersler.Entity.Concrete.Teacher", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("About")
-                        .IsRequired()
-                        .HasMaxLength(500)
+                    b.Property<string>("Id")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("BirthYear")
+                    b.Property<string>("About")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("AccessFailedCount")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Age")
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("BranchId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("DateOfRegistration")
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Experience")
+                    b.Property<DateTime>("DateOfBirth")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("EmailConfirmed")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasMaxLength(50)
+                    b.Property<string>("Experince")
                         .HasColumnType("TEXT");
 
-                    b.Property<char>("Gender")
+                    b.Property<string>("FirstName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Gender")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ImageUrl")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Location")
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("PricePerHour")
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("UniversityId")
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal?>("PricePerHour")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Url")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
                     b.HasIndex("BranchId");
 
-                    b.HasIndex("UniversityId");
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
 
-                    b.ToTable("Teachers");
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex");
+
+                    b.ToTable("AspNetUsers", (string)null);
 
                     b.HasData(
                         new
                         {
-                            Id = 1,
-                            About = "Uzun zamandır öğretmenlik yapıyorum ve öğretmeyi çok seviyorum.",
-                            BirthYear = 1985,
-                            BranchId = 1,
-                            DateOfRegistration = new DateTime(2023, 1, 5, 9, 53, 21, 504, DateTimeKind.Local).AddTicks(1169),
-                            Experience = 20,
-                            FirstName = "Osman",
-                            Gender = 'E',
-                            ImageUrl = "1.png",
-                            LastName = "Kıran",
-                            Location = "İstanbul",
-                            PricePerHour = 1500m,
-                            UniversityId = 1,
-                            Url = "osman-kiran"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            About = "Uzun zamandır öğretmenlik yapıyorum ve öğretmeyi çok seviyorum.",
-                            BirthYear = 1975,
-                            BranchId = 2,
-                            DateOfRegistration = new DateTime(2023, 1, 5, 9, 53, 21, 504, DateTimeKind.Local).AddTicks(1176),
-                            Experience = 30,
+                            Id = "cf03a5b7-999f-4fdd-9206-38bb44045ac8",
+                            About = "Mimar Sinan Güzel Sanatlar Üniversitesi Konservatuar mezunuyum. Uzmanlık alanım Piyano olamakla beraber keman ve gitar dersleri de vermekteyim.",
+                            AccessFailedCount = 0,
+                            Age = "39",
+                            BranchId = 4,
+                            ConcurrencyStamp = "b79e4c10-ba5d-45f1-a243-9bb6e6481cbb",
+                            DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EmailConfirmed = false,
+                            Experince = "15",
                             FirstName = "Ahmet",
-                            Gender = 'E',
-                            ImageUrl = "2.png",
-                            LastName = "Acar",
-                            Location = "Ankara",
-                            PricePerHour = 2000m,
-                            UniversityId = 2,
-                            Url = "ahmet-acar"
+                            Gender = "Erkek",
+                            ImageUrl = "10.png",
+                            LastName = "Yılmaz",
+                            Location = "Beşiktaş",
+                            LockoutEnabled = false,
+                            Phone = "05550005500",
+                            PhoneNumberConfirmed = false,
+                            PricePerHour = 450m,
+                            SecurityStamp = "d5e0089c-c2ae-45f4-97eb-d6e122fc648f",
+                            TwoFactorEnabled = false,
+                            Url = "ogretmen-ahmet-yilmaz"
                         },
                         new
                         {
-                            Id = 3,
-                            About = "Uzun zamandır öğretmenlik yapıyorum ve öğretmeyi çok seviyorum.",
-                            BirthYear = 1993,
+                            Id = "7cc24b48-89e9-474e-8a5a-14bd7b627f96",
+                            About = "İngilizce Öğretmeniyim. Her türlü İngilizce sınavlarına hazırlık konusunda ders vermekteyim.",
+                            AccessFailedCount = 0,
+                            Age = "27",
                             BranchId = 3,
-                            DateOfRegistration = new DateTime(2023, 1, 5, 9, 53, 21, 504, DateTimeKind.Local).AddTicks(1180),
-                            Experience = 10,
-                            FirstName = "Hatice",
-                            Gender = 'K',
-                            ImageUrl = "3.png",
-                            LastName = "Özer",
-                            Location = "İstanbul",
-                            PricePerHour = 2500m,
-                            UniversityId = 3,
-                            Url = "hatice-ozer"
+                            ConcurrencyStamp = "68b43e2e-e9ff-46da-a821-13c3206185c9",
+                            DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EmailConfirmed = false,
+                            Experince = "5",
+                            FirstName = "Arzu",
+                            Gender = "Kadın",
+                            ImageUrl = "11.png",
+                            LastName = "Doğramacı",
+                            Location = "Şişli",
+                            LockoutEnabled = false,
+                            Phone = "05550005501",
+                            PhoneNumberConfirmed = false,
+                            PricePerHour = 300m,
+                            SecurityStamp = "4d67f3b2-a534-464b-a77f-c2caf72b9045",
+                            TwoFactorEnabled = false,
+                            Url = "ogretmen-arzu-dogramaci"
                         },
                         new
                         {
-                            Id = 4,
-                            About = "Uzun zamandır öğretmenlik yapıyorum ve öğretmeyi çok seviyorum.",
-                            BirthYear = 1995,
+                            Id = "6c39a3ac-cf33-4fb8-a1bd-da27534bb4c6",
+                            About = "İlköğretim-lise düzeyinde matematik dersleri verilir. Sınavlar için fazladan etüt alabilirsiniz.",
+                            AccessFailedCount = 0,
+                            Age = "42",
                             BranchId = 1,
-                            DateOfRegistration = new DateTime(2023, 1, 5, 9, 53, 21, 504, DateTimeKind.Local).AddTicks(1184),
-                            Experience = 8,
-                            FirstName = "Cemre",
-                            Gender = 'E',
-                            ImageUrl = "4.png",
-                            LastName = "Şenel",
-                            Location = "İstanbul",
-                            PricePerHour = 2200m,
-                            UniversityId = 4,
-                            Url = "cemre-senel"
+                            ConcurrencyStamp = "928eb1bd-40c5-4497-8bea-f4c0d276db73",
+                            DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EmailConfirmed = false,
+                            Experince = "",
+                            FirstName = "Serdar",
+                            Gender = "Erkek",
+                            ImageUrl = "12.png",
+                            LastName = "Kulbilge",
+                            Location = "Aksaray",
+                            LockoutEnabled = false,
+                            Phone = "05550005502",
+                            PhoneNumberConfirmed = false,
+                            PricePerHour = 250m,
+                            SecurityStamp = "11fe8c8d-8c05-45a8-9f51-ee05a4c70543",
+                            TwoFactorEnabled = false,
+                            Url = "ogretmen-serdar-kulbilge"
+                        },
+                        new
+                        {
+                            Id = "d1886849-db28-422a-ac09-bc451bd44c9c",
+                            About = "Boğaziçi Üniversitesi Mezunuyum. 28 yaşındayım. Özel bir lisede Kimya Öğretmenliği yapıyorum.",
+                            AccessFailedCount = 0,
+                            Age = "28",
+                            BranchId = 2,
+                            ConcurrencyStamp = "523e76a1-688c-4b89-9071-c5dd0bb59aee",
+                            DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EmailConfirmed = false,
+                            Experince = "6",
+                            FirstName = "Hande",
+                            Gender = "Kadın",
+                            ImageUrl = "13.png",
+                            LastName = "Yıldırım",
+                            Location = "Etiler",
+                            LockoutEnabled = false,
+                            Phone = "05550005503",
+                            PhoneNumberConfirmed = false,
+                            PricePerHour = 300m,
+                            SecurityStamp = "a88d6ffc-44e0-4d90-8064-26b5e132bca0",
+                            TwoFactorEnabled = false,
+                            Url = "ogretmen-hande-yildirim"
                         });
                 });
 
-            modelBuilder.Entity("OzelDersler.Entity.Concrete.University", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Universities");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Bahçeşehir Üniversitesi"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Beykent Üniversitesi"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "İstanbul Aydın Üniversitesi"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "İstanbul Teknik Üniversitesi"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Orta Doğu Teknik Üniversitesi"
-                        });
-                });
-
-            modelBuilder.Entity("OzelDersler.Entity.Concrete.StudentTeacher", b =>
-                {
-                    b.HasOne("OzelDersler.Entity.Concrete.Student", "Student")
+                    b.HasOne("OzelDersler.Entity.Concrete.Identity.Role", null)
                         .WithMany()
-                        .HasForeignKey("StudentId")
+                        .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("OzelDersler.Entity.Concrete.Teacher", "Teacher")
-                        .WithMany("StudentTeachers")
-                        .HasForeignKey("TeacherId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Student");
-
-                    b.Navigation("Teacher");
                 });
 
-            modelBuilder.Entity("OzelDersler.Entity.Concrete.Teacher", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.HasOne("OzelDersler.Entity.Concrete.Identity.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.HasOne("OzelDersler.Entity.Concrete.Identity.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.HasOne("OzelDersler.Entity.Concrete.Identity.Role", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OzelDersler.Entity.Concrete.Identity.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.HasOne("OzelDersler.Entity.Concrete.Identity.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("OzelDersler.Entity.Concrete.Identity.User", b =>
                 {
                     b.HasOne("OzelDersler.Entity.Concrete.Branch", "Branch")
                         .WithMany()
@@ -362,20 +479,7 @@ namespace OzelDersler.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("OzelDersler.Entity.Concrete.University", "University")
-                        .WithMany()
-                        .HasForeignKey("UniversityId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Branch");
-
-                    b.Navigation("University");
-                });
-
-            modelBuilder.Entity("OzelDersler.Entity.Concrete.Teacher", b =>
-                {
-                    b.Navigation("StudentTeachers");
                 });
 #pragma warning restore 612, 618
         }

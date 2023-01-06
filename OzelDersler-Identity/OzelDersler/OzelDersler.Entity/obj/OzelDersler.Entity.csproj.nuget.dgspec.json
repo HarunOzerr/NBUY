@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SABAH\\Desktop\\OzelDersler\\OzelDersler\\OzelDersler.Entity\\OzelDersler.Entity.csproj": {}
+    "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler-Identity\\OzelDersler\\OzelDersler.Entity\\OzelDersler.Entity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SABAH\\Desktop\\OzelDersler\\OzelDersler\\OzelDersler.Entity\\OzelDersler.Entity.csproj": {
+    "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler-Identity\\OzelDersler\\OzelDersler.Entity\\OzelDersler.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SABAH\\Desktop\\OzelDersler\\OzelDersler\\OzelDersler.Entity\\OzelDersler.Entity.csproj",
+        "projectUniqueName": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler-Identity\\OzelDersler\\OzelDersler.Entity\\OzelDersler.Entity.csproj",
         "projectName": "OzelDersler.Entity",
-        "projectPath": "C:\\Users\\SABAH\\Desktop\\OzelDersler\\OzelDersler\\OzelDersler.Entity\\OzelDersler.Entity.csproj",
+        "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler-Identity\\OzelDersler\\OzelDersler.Entity\\OzelDersler.Entity.csproj",
         "packagesPath": "C:\\Users\\SABAH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SABAH\\Desktop\\OzelDersler\\OzelDersler\\OzelDersler.Entity\\obj\\",
+        "outputPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler-Identity\\OzelDersler\\OzelDersler.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",

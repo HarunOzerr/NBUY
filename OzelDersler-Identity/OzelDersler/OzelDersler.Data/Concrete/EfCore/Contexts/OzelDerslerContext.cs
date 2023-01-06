@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using OzelDersler.Data.Config;
+using OzelDersler.Data.Extensions;
 using OzelDersler.Entity.Concrete;
+using OzelDersler.Entity.Concrete.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +14,7 @@ namespace OzelDersler.Data.Concrete.EfCore.Contexts
 {
     public class OzelDerslerContext : IdentityDbContext<User, Role, string>
     {
-        public DbSet<Teacher> Teachers { get; set; }
-        public DbSet<Student> Students { get; set; }
-        public DbSet<StudentTeacher> StudentTeachers { get; set; }
         public DbSet<Branch> Branches { get; set; }
-        public DbSet<University> Universities { get; set; }
 
         public OzelDerslerContext(DbContextOptions<OzelDerslerContext> options) : base(options)
         {
@@ -24,11 +22,9 @@ namespace OzelDersler.Data.Concrete.EfCore.Contexts
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new TeacherConfig());
-            modelBuilder.ApplyConfiguration(new StudentConfig());
-            modelBuilder.ApplyConfiguration(new StudentTeacherConfig());
+            modelBuilder.SeedData();
             modelBuilder.ApplyConfiguration(new BranchConfig());
-            modelBuilder.ApplyConfiguration(new UniversityConfig());
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

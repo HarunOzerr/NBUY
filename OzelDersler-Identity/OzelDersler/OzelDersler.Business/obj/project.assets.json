@@ -1351,11 +1351,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SABAH\\Desktop\\OzelDersler\\OzelDersler\\OzelDersler.Business\\OzelDersler.Business.csproj",
+      "projectUniqueName": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler-Identity\\OzelDersler\\OzelDersler.Business\\OzelDersler.Business.csproj",
       "projectName": "OzelDersler.Business",
-      "projectPath": "C:\\Users\\SABAH\\Desktop\\OzelDersler\\OzelDersler\\OzelDersler.Business\\OzelDersler.Business.csproj",
+      "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler-Identity\\OzelDersler\\OzelDersler.Business\\OzelDersler.Business.csproj",
       "packagesPath": "C:\\Users\\SABAH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SABAH\\Desktop\\OzelDersler\\OzelDersler\\OzelDersler.Business\\obj\\",
+      "outputPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler-Identity\\OzelDersler\\OzelDersler.Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1372,8 +1372,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\SABAH\\Desktop\\OzelDersler\\OzelDersler\\OzelDersler.Data\\OzelDersler.Data.csproj": {
-              "projectPath": "C:\\Users\\SABAH\\Desktop\\OzelDersler\\OzelDersler\\OzelDersler.Data\\OzelDersler.Data.csproj"
+            "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler-Identity\\OzelDersler\\OzelDersler.Data\\OzelDersler.Data.csproj": {
+              "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler-Identity\\OzelDersler\\OzelDersler.Data\\OzelDersler.Data.csproj"
             }
           }
         }

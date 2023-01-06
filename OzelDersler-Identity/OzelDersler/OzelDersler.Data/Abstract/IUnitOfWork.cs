@@ -8,10 +8,8 @@ namespace OzelDersler.Data.Abstract
 {
     public interface IUnitOfWork : IDisposable
     {
-        ITeacherRepository Teachers { get; }
-        IStudentRepository Students { get; }
         IBranchRepository Branches { get; }
-        IUniversityRepository Universities { get; }
+        IUserRepository Users { get; }
         Task SaveAsync();
         void Save();
     }

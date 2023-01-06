@@ -15,11 +15,12 @@
         @foreach (var country in Model)
         {
             <tr>
-                <td>@country.name</td>
-                <td>@country.capital</td>
+                <td>@country.Name.Official</td>
                 <td>
-                    <img src="@country.flag" width="200">
-                </td>
+                    @foreach (var capital in country.)
+                    {
+                       capital.
+                    }</td>
             </tr>
         }
     </tbody>

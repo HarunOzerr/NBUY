@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "axBiJZJ7pz9FOaKiiBC/LLGY03n0P6PufjYg0M2fGA/WKwYNEmjFreAVNKZN00jQNRMrQHlet92NwllW0uStXg==",
+  "dgSpecHash": "FZpSTXHwxoHPwRfLVvjgefslHhkw8viJb8fpIlhXG0UPB5N66wqWGmncsGRLwyMiubc4knBMUMTqx1vyiTR+gQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SABAH\\Desktop\\OzelDersler\\OzelDersler\\OzelDersler.Entity\\OzelDersler.Entity.csproj",
+  "projectFilePath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler-Identity\\OzelDersler\\OzelDersler.Entity\\OzelDersler.Entity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SABAH\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.1\\microsoft.aspnetcore.cryptography.internal.7.0.1.nupkg.sha512",
     "C:\\Users\\SABAH\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.1\\microsoft.aspnetcore.cryptography.keyderivation.7.0.1.nupkg.sha512",

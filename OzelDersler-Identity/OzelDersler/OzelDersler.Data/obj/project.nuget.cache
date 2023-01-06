@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ux7U0y40yG28COTP5DLxHhKmuhC1/rRAx5jJVNNGvzcP1gbfKyPKqVHhFpodWDGMDATlIMpb9LrVN6fPuZYHVQ==",
+  "dgSpecHash": "y5O1rfR87iCWSjv9JscZ/7XWdbtlAhHP6Z4KsgP9NWiqnUFYiuVVTw9eX7OfEQPUdmxlsS+cudAnmaihD10OMg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SABAH\\Desktop\\OzelDersler\\OzelDersler\\OzelDersler.Data\\OzelDersler.Data.csproj",
+  "projectFilePath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler-Identity\\OzelDersler\\OzelDersler.Data\\OzelDersler.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SABAH\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\SABAH\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.1\\microsoft.aspnetcore.cryptography.internal.7.0.1.nupkg.sha512",
