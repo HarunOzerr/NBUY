@@ -111,13 +111,13 @@ namespace ShoppingApp.Data.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "cfeea506-6185-48ca-94ec-6a1b892f14d3",
-                            RoleId = "facdfb32-9f47-49f1-8e1e-77a5fb81f4a3"
+                            UserId = "01c5033d-1d70-46ad-a210-c474a1f4d26a",
+                            RoleId = "6aee362e-1d7a-4290-88fc-76453a4cd53c"
                         },
                         new
                         {
-                            UserId = "491edfe4-ce74-4e5f-9e20-b17fb164efee",
-                            RoleId = "93da8d85-2e0b-4c58-9d5c-2c986538fbfc"
+                            UserId = "450d18e1-60d8-4561-b8dc-ef4544f77f06",
+                            RoleId = "499bd4cb-bf66-4b6f-88d6-916387a8e453"
                         });
                 });
 
@@ -148,6 +148,9 @@ namespace ShoppingApp.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Deneme")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
@@ -161,12 +164,12 @@ namespace ShoppingApp.Data.Migrations
                         new
                         {
                             Id = 1,
-                            UserId = "cfeea506-6185-48ca-94ec-6a1b892f14d3"
+                            UserId = "01c5033d-1d70-46ad-a210-c474a1f4d26a"
                         },
                         new
                         {
                             Id = 2,
-                            UserId = "491edfe4-ce74-4e5f-9e20-b17fb164efee"
+                            UserId = "450d18e1-60d8-4561-b8dc-ef4544f77f06"
                         });
                 });
 
@@ -286,14 +289,14 @@ namespace ShoppingApp.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "facdfb32-9f47-49f1-8e1e-77a5fb81f4a3",
+                            Id = "6aee362e-1d7a-4290-88fc-76453a4cd53c",
                             Description = "Admin rolü",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "93da8d85-2e0b-4c58-9d5c-2c986538fbfc",
+                            Id = "499bd4cb-bf66-4b6f-88d6-916387a8e453",
                             Description = "User rolü",
                             Name = "User",
                             NormalizedName = "USER"
@@ -385,11 +388,11 @@ namespace ShoppingApp.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "cfeea506-6185-48ca-94ec-6a1b892f14d3",
+                            Id = "01c5033d-1d70-46ad-a210-c474a1f4d26a",
                             AccessFailedCount = 0,
                             Address = "Çek cd. Senet sk. Fatura ap.",
                             City = "İstanbul",
-                            ConcurrencyStamp = "ffa6b106-3b50-48dc-a086-1c8a596fe843",
+                            ConcurrencyStamp = "3bf81063-9230-40da-8fad-a873f240ec7c",
                             DateOfBirth = new DateTime(1998, 5, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
@@ -399,20 +402,20 @@ namespace ShoppingApp.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPQTqX00UihkttKtrWMO4ZhkyJTeYVvg4eB0OHjT9PjSlnVkn1MicMcYgnrdMVVKOw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEIjsw6ZksAM+XpC4pWuvd9bcAi8XmESfi/3+Nqh5DMGr1SsAfUfQrjSsu53dVJxN6g==",
                             PhoneNumber = "5555555555",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "bc03fd21-5257-4b40-ba70-c8187d4d2f09",
+                            SecurityStamp = "911bb689-5ba5-426b-ab2d-6b42a34a24e9",
                             TwoFactorEnabled = false,
                             UserName = "admin"
                         },
                         new
                         {
-                            Id = "491edfe4-ce74-4e5f-9e20-b17fb164efee",
+                            Id = "450d18e1-60d8-4561-b8dc-ef4544f77f06",
                             AccessFailedCount = 0,
                             Address = "Akasya cd. Orkide sk. Gül ap.",
                             City = "İzmir",
-                            ConcurrencyStamp = "c2597080-6f40-4461-b682-9baad81ab85f",
+                            ConcurrencyStamp = "ee68ca4f-9da3-4d38-b506-51ffbe2d80e0",
                             DateOfBirth = new DateTime(1985, 10, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user@gmail.com",
                             EmailConfirmed = true,
@@ -422,10 +425,10 @@ namespace ShoppingApp.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "USER@GMAIL.COM",
                             NormalizedUserName = "USER",
-                            PasswordHash = "AQAAAAIAAYagAAAAEP3QwPgbTGDZAjEuAFmu6tSJ4bbTj2mKyFRfOiQcAWF4Uto90Aes5eZ86B5FKlM+Uw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEDjxPM2hkqqnBwR5BQHzJcHIJSFRrl8Z/r/UsVRB8B7N0KrHuGkQhxaO6W2YR9LfOg==",
                             PhoneNumber = "4444444444",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "ef603a08-6237-4609-973e-8c31569bf88a",
+                            SecurityStamp = "a9fe00b6-03fd-46be-9e16-b0bdad24a957",
                             TwoFactorEnabled = false,
                             UserName = "user"
                         });

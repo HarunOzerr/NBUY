@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OzelDersler.Entity.Abstract
+namespace OzelDersler.Entity.Concrete
 {
-    public interface IEntityBase
+    public class BaseEntity
     {
         public int Id { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime UpdatedDate { get; set; }
+
     }
 }

@@ -768,19 +768,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SABAH\\.nuget\\packages\\": {}
+    "C:\\Users\\harun\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SABAH\\Desktop\\OzelDersler\\OzelDersler\\OzelDersler.Entity\\OzelDersler.Entity.csproj",
+      "projectUniqueName": "C:\\Users\\harun\\Documents\\GitHub\\NBUY\\OzelDersler-identity-sorunsuz\\OzelDersler\\OzelDersler.Entity\\OzelDersler.Entity.csproj",
       "projectName": "OzelDersler.Entity",
-      "projectPath": "C:\\Users\\SABAH\\Desktop\\OzelDersler\\OzelDersler\\OzelDersler.Entity\\OzelDersler.Entity.csproj",
-      "packagesPath": "C:\\Users\\SABAH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SABAH\\Desktop\\OzelDersler\\OzelDersler\\OzelDersler.Entity\\obj\\",
+      "projectPath": "C:\\Users\\harun\\Documents\\GitHub\\NBUY\\OzelDersler-identity-sorunsuz\\OzelDersler\\OzelDersler.Entity\\OzelDersler.Entity.csproj",
+      "packagesPath": "C:\\Users\\harun\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\harun\\Documents\\GitHub\\NBUY\\OzelDersler-identity-sorunsuz\\OzelDersler\\OzelDersler.Entity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\harun\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

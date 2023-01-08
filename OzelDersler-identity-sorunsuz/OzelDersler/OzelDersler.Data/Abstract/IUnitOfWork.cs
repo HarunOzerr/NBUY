@@ -10,8 +10,7 @@ namespace OzelDersler.Data.Abstract
     {
         ITeacherRepository Teachers { get; }
         IStudentRepository Students { get; }
-        IBranchRepository Branches { get; }
-        IUniversityRepository Universities { get; }
+
         Task SaveAsync();
         void Save();
     }

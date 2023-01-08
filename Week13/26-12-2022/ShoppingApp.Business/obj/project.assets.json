@@ -3828,19 +3828,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SABAH\\.nuget\\packages\\": {}
+    "C:\\Users\\harun\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week13\\26-12-2022\\ShoppingApp.Business\\ShoppingApp.Business.csproj",
+      "projectUniqueName": "C:\\Users\\harun\\Documents\\GitHub\\NBUY\\Week13\\26-12-2022\\ShoppingApp.Business\\ShoppingApp.Business.csproj",
       "projectName": "ShoppingApp.Business",
-      "projectPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week13\\26-12-2022\\ShoppingApp.Business\\ShoppingApp.Business.csproj",
-      "packagesPath": "C:\\Users\\SABAH\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week13\\26-12-2022\\ShoppingApp.Business\\obj\\",
+      "projectPath": "C:\\Users\\harun\\Documents\\GitHub\\NBUY\\Week13\\26-12-2022\\ShoppingApp.Business\\ShoppingApp.Business.csproj",
+      "packagesPath": "C:\\Users\\harun\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\harun\\Documents\\GitHub\\NBUY\\Week13\\26-12-2022\\ShoppingApp.Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\harun\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3854,8 +3854,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week13\\26-12-2022\\ShoppingApp.Data\\ShoppingApp.Data.csproj": {
-              "projectPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\Week13\\26-12-2022\\ShoppingApp.Data\\ShoppingApp.Data.csproj"
+            "C:\\Users\\harun\\Documents\\GitHub\\NBUY\\Week13\\26-12-2022\\ShoppingApp.Data\\ShoppingApp.Data.csproj": {
+              "projectPath": "C:\\Users\\harun\\Documents\\GitHub\\NBUY\\Week13\\26-12-2022\\ShoppingApp.Data\\ShoppingApp.Data.csproj"
             }
           }
         }

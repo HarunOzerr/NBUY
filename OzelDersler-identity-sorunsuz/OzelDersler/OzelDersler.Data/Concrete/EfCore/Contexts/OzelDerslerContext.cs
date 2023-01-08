@@ -1,6 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using OzelDersler.Data.Config;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using OzelDersler.Entity.Concrete;
+using OzelDersler.Entity.Concrete.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,25 +11,14 @@ using System.Threading.Tasks;
 
 namespace OzelDersler.Data.Concrete.EfCore.Contexts
 {
-    public class OzelDerslerContext : DbContext
+    public class OzelDerslerContext : IdentityDbContext<User, IdentityRole, string>
     {
+        public OzelDerslerContext(DbContextOptions<OzelDerslerContext> options) : base(options)
+        {
+
+        }
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<Student> Students { get; set; }
-        public DbSet<StudentTeacher> StudentTeachers { get; set; }
-        public DbSet<Branch> Branches { get; set; }
-        public DbSet<University> Universities { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlite("Data Source=OzelDersler.db");
-        }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.ApplyConfiguration(new TeacherConfig());
-            modelBuilder.ApplyConfiguration(new StudentConfig());
-            modelBuilder.ApplyConfiguration(new StudentTeacherConfig());
-            modelBuilder.ApplyConfiguration(new BranchConfig());
-            modelBuilder.ApplyConfiguration(new UniversityConfig());
-        }
+        public DbSet<Lesson> Lessons { get; set; }
     }
 }

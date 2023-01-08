@@ -1,5 +1,4 @@
-﻿using OzelDersler.Entity.Abstract;
-using OzelDersler.Entity.Concrete.Identity;
+﻿using OzelDersler.Entity.Concrete.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,23 +7,12 @@ using System.Threading.Tasks;
 
 namespace OzelDersler.Entity.Concrete
 {
-    public class Teacher : User
+    public class Teacher : BaseUserEntity
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public int BirthYear { get; set; }
-        public string About { get; set; }
-        public char Gender { get; set; }
-        public int Experience { get; set; }
-        public string Location { get; set; }
-        public string Url { get; set; }
-        public string ImageUrl { get; set; }
-        public DateTime DateOfRegistration { get; set; } = DateTime.Now;
-        public decimal PricePerHour { get; set; }
-        public int BranchId { get; set; }
-        public Branch Branch { get; set; }
-        public int UniversityId { get; set; }
-        public University University { get; set; }
-        public List<StudentTeacher> StudentTeachers { get; set; }
+        public string Branch { get; set; }
+        public string UserId { get; set; }
+        public User User { get; set; }
+
+
     }
 }

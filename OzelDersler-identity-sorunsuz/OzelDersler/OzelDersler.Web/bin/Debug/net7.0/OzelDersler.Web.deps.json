@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "OzelDersler.Web/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.1",
           "Microsoft.EntityFrameworkCore.Design": "7.0.1",
           "OzelDersler.Business": "1.0.0"
         },

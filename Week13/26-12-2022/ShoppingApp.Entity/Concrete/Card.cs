@@ -14,5 +14,7 @@ namespace ShoppingApp.Entity.Concrete
         public string UserId { get; set; }
         public User User { get; set; }
         public List<CardItem> CardItems { get; set; }
+        public string Deneme { get; set; }
+
     }
 }

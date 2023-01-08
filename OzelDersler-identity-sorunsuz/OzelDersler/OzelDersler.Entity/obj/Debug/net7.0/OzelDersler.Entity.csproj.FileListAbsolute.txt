@@ -22,3 +22,15 @@ C:\Users\SABAH\Desktop\OzelDersler\OzelDersler\OzelDersler.Entity\obj\Debug\net7
 C:\Users\SABAH\Desktop\OzelDersler\OzelDersler\OzelDersler.Entity\obj\Debug\net7.0\refint\OzelDersler.Entity.dll
 C:\Users\SABAH\Desktop\OzelDersler\OzelDersler\OzelDersler.Entity\obj\Debug\net7.0\OzelDersler.Entity.pdb
 C:\Users\SABAH\Desktop\OzelDersler\OzelDersler\OzelDersler.Entity\obj\Debug\net7.0\ref\OzelDersler.Entity.dll
+C:\Users\harun\Documents\GitHub\NBUY\OzelDersler-identity-sorunsuz\OzelDersler\OzelDersler.Entity\bin\Debug\net7.0\OzelDersler.Entity.deps.json
+C:\Users\harun\Documents\GitHub\NBUY\OzelDersler-identity-sorunsuz\OzelDersler\OzelDersler.Entity\bin\Debug\net7.0\OzelDersler.Entity.dll
+C:\Users\harun\Documents\GitHub\NBUY\OzelDersler-identity-sorunsuz\OzelDersler\OzelDersler.Entity\bin\Debug\net7.0\OzelDersler.Entity.pdb
+C:\Users\harun\Documents\GitHub\NBUY\OzelDersler-identity-sorunsuz\OzelDersler\OzelDersler.Entity\obj\Debug\net7.0\OzelDersler.Entity.csproj.AssemblyReference.cache
+C:\Users\harun\Documents\GitHub\NBUY\OzelDersler-identity-sorunsuz\OzelDersler\OzelDersler.Entity\obj\Debug\net7.0\OzelDersler.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\harun\Documents\GitHub\NBUY\OzelDersler-identity-sorunsuz\OzelDersler\OzelDersler.Entity\obj\Debug\net7.0\OzelDersler.Entity.AssemblyInfoInputs.cache
+C:\Users\harun\Documents\GitHub\NBUY\OzelDersler-identity-sorunsuz\OzelDersler\OzelDersler.Entity\obj\Debug\net7.0\OzelDersler.Entity.AssemblyInfo.cs
+C:\Users\harun\Documents\GitHub\NBUY\OzelDersler-identity-sorunsuz\OzelDersler\OzelDersler.Entity\obj\Debug\net7.0\OzelDersler.Entity.csproj.CoreCompileInputs.cache
+C:\Users\harun\Documents\GitHub\NBUY\OzelDersler-identity-sorunsuz\OzelDersler\OzelDersler.Entity\obj\Debug\net7.0\OzelDersler.Entity.dll
+C:\Users\harun\Documents\GitHub\NBUY\OzelDersler-identity-sorunsuz\OzelDersler\OzelDersler.Entity\obj\Debug\net7.0\refint\OzelDersler.Entity.dll
+C:\Users\harun\Documents\GitHub\NBUY\OzelDersler-identity-sorunsuz\OzelDersler\OzelDersler.Entity\obj\Debug\net7.0\OzelDersler.Entity.pdb
+C:\Users\harun\Documents\GitHub\NBUY\OzelDersler-identity-sorunsuz\OzelDersler\OzelDersler.Entity\obj\Debug\net7.0\ref\OzelDersler.Entity.dll

@@ -18,17 +18,11 @@ namespace OzelDersler.Data.Concrete
             _context = context;
         }
 
-        private EfCoreBranchRepository _branchRepsitory;
         private EfCoreStudentRepository _studentRepository;
         private EfCoreTeacherRepository _teacherRepository;
-        private EfCoreUniversityRepository _universityRepository;
         public ITeacherRepository Teachers => _teacherRepository = _teacherRepository ?? new EfCoreTeacherRepository(_context);
 
         public IStudentRepository Students => _studentRepository = _studentRepository ?? new EfCoreStudentRepository(_context);
-
-        public IBranchRepository Branches => _branchRepsitory = _branchRepsitory ?? new EfCoreBranchRepository(_context);
-
-        public IUniversityRepository Universities => _universityRepository = _universityRepository ?? new EfCoreUniversityRepository(_context);
 
         public void Dispose()
         {

@@ -1485,24 +1485,25 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 7.0.1",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.1",
       "OzelDersler.Business >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SABAH\\.nuget\\packages\\": {}
+    "C:\\Users\\harun\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SABAH\\Desktop\\OzelDersler\\OzelDersler\\OzelDersler.Web\\OzelDersler.Web.csproj",
+      "projectUniqueName": "C:\\Users\\harun\\Documents\\GitHub\\NBUY\\OzelDersler-identity-sorunsuz\\OzelDersler\\OzelDersler.Web\\OzelDersler.Web.csproj",
       "projectName": "OzelDersler.Web",
-      "projectPath": "C:\\Users\\SABAH\\Desktop\\OzelDersler\\OzelDersler\\OzelDersler.Web\\OzelDersler.Web.csproj",
-      "packagesPath": "C:\\Users\\SABAH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SABAH\\Desktop\\OzelDersler\\OzelDersler\\OzelDersler.Web\\obj\\",
+      "projectPath": "C:\\Users\\harun\\Documents\\GitHub\\NBUY\\OzelDersler-identity-sorunsuz\\OzelDersler\\OzelDersler.Web\\OzelDersler.Web.csproj",
+      "packagesPath": "C:\\Users\\harun\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\harun\\Documents\\GitHub\\NBUY\\OzelDersler-identity-sorunsuz\\OzelDersler\\OzelDersler.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\harun\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1516,8 +1517,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\SABAH\\Desktop\\OzelDersler\\OzelDersler\\OzelDersler.Business\\OzelDersler.Business.csproj": {
-              "projectPath": "C:\\Users\\SABAH\\Desktop\\OzelDersler\\OzelDersler\\OzelDersler.Business\\OzelDersler.Business.csproj"
+            "C:\\Users\\harun\\Documents\\GitHub\\NBUY\\OzelDersler-identity-sorunsuz\\OzelDersler\\OzelDersler.Business\\OzelDersler.Business.csproj": {
+              "projectPath": "C:\\Users\\harun\\Documents\\GitHub\\NBUY\\OzelDersler-identity-sorunsuz\\OzelDersler\\OzelDersler.Business\\OzelDersler.Business.csproj"
             }
           }
         }
@@ -1532,6 +1533,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[7.0.1, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
