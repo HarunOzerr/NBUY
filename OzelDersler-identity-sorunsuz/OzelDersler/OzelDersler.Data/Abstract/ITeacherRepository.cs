@@ -9,7 +9,7 @@ namespace OzelDersler.Data.Abstract
 {
     public interface ITeacherRepository : IRepository<Teacher>
     {
-        List<Teacher> GetTeachersByBranch();
+        Task<List<Teacher>> GetTeachersByBranchAsync(int branchId);
         Task<List<Teacher>> GetHomePageTeachersAsync();
     }
 }

@@ -1,0 +1,15 @@
+C:\Users\SABAH\Documents\GitHub\NBUY\Week15\SOLID\Solid04_LiskovsSubstition\bin\Debug\net7.0\Solid04_LiskovsSubstition.exe
+C:\Users\SABAH\Documents\GitHub\NBUY\Week15\SOLID\Solid04_LiskovsSubstition\bin\Debug\net7.0\Solid04_LiskovsSubstition.deps.json
+C:\Users\SABAH\Documents\GitHub\NBUY\Week15\SOLID\Solid04_LiskovsSubstition\bin\Debug\net7.0\Solid04_LiskovsSubstition.runtimeconfig.json
+C:\Users\SABAH\Documents\GitHub\NBUY\Week15\SOLID\Solid04_LiskovsSubstition\bin\Debug\net7.0\Solid04_LiskovsSubstition.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\Week15\SOLID\Solid04_LiskovsSubstition\bin\Debug\net7.0\Solid04_LiskovsSubstition.pdb
+C:\Users\SABAH\Documents\GitHub\NBUY\Week15\SOLID\Solid04_LiskovsSubstition\obj\Debug\net7.0\Solid04_LiskovsSubstition.csproj.AssemblyReference.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\Week15\SOLID\Solid04_LiskovsSubstition\obj\Debug\net7.0\Solid04_LiskovsSubstition.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SABAH\Documents\GitHub\NBUY\Week15\SOLID\Solid04_LiskovsSubstition\obj\Debug\net7.0\Solid04_LiskovsSubstition.AssemblyInfoInputs.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\Week15\SOLID\Solid04_LiskovsSubstition\obj\Debug\net7.0\Solid04_LiskovsSubstition.AssemblyInfo.cs
+C:\Users\SABAH\Documents\GitHub\NBUY\Week15\SOLID\Solid04_LiskovsSubstition\obj\Debug\net7.0\Solid04_LiskovsSubstition.csproj.CoreCompileInputs.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\Week15\SOLID\Solid04_LiskovsSubstition\obj\Debug\net7.0\Solid04_LiskovsSubstition.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\Week15\SOLID\Solid04_LiskovsSubstition\obj\Debug\net7.0\refint\Solid04_LiskovsSubstition.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\Week15\SOLID\Solid04_LiskovsSubstition\obj\Debug\net7.0\Solid04_LiskovsSubstition.pdb
+C:\Users\SABAH\Documents\GitHub\NBUY\Week15\SOLID\Solid04_LiskovsSubstition\obj\Debug\net7.0\Solid04_LiskovsSubstition.genruntimeconfig.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\Week15\SOLID\Solid04_LiskovsSubstition\obj\Debug\net7.0\ref\Solid04_LiskovsSubstition.dll

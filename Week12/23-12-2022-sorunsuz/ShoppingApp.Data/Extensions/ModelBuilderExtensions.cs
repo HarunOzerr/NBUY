@@ -30,7 +30,7 @@ namespace ShoppingApp.Data.Extensions
                     NormalizedName="USER"
                 }
             };
-            modelBuilder.Entity<Role>().HasData(roles);
+            modelBuilder.Entity<Role>().HasData(roles); 
             #endregion
 
             #region KullanıcıBilgileri

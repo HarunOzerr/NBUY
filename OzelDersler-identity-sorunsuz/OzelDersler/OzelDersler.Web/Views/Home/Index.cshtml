@@ -1,28 +1,32 @@
-﻿@{
+﻿@model List<TeacherDto>
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Öğretmenlerimiz</h1>
+    <h1 class="display-4 mb-4">Öğretmenlerimiz</h1>
 </div>
 
 <div class="row">
-    <div class="col-4">
-        <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
-    </ul>
-    <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-    </div>
-</div>
-    </div>
+    @foreach (var teacher in Model)
+    {
+        <div class="col-4">
+            <div class="card mb-3" style="width: 18rem;">
+                <img class="card-img-top" src="~/images/@teacher.ImageUrl" height="300" alt="teacher-resim">
+                <div class="card-body">
+                    <h5 class="card-title">@teacher.FirstName @teacher.LastName</h5>
+                    <p class="card-text">@teacher.About</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@teacher.Experience Yıllık Deneyim</li>
+                    <li class="list-group-item">@($"Ders Saati {teacher.PricePerHour:C0}")</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link text-decoration-none">Detay</a>
+                    <a href="#" class="card-link text-decoration-none">Ders Al</a>
+                </div>
+            </div>
+        </div>
+
+    }
 </div>

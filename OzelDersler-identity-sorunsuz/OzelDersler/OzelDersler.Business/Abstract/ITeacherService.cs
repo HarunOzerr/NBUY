@@ -14,7 +14,7 @@ namespace OzelDersler.Business.Abstract
         Task CreateAsync(Teacher teacher);
         void Update(Teacher teacher);
         void Delete(Teacher teacher);
-        List<Teacher> GetTeachersByBranch();
+        Task<List<Teacher>> GetTeachersByBranchAsync(int branchId);
         Task<List<Teacher>> GetHomePageTeachersAsync();
     }
 }

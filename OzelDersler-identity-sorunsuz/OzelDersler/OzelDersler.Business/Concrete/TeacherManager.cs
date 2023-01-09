@@ -45,9 +45,9 @@ namespace OzelDersler.Business.Concrete
             return await _unitOfWork.Teachers.GetHomePageTeachersAsync();
         }
 
-        public List<Teacher> GetTeachersByBranch()
+        public async Task<List<Teacher>> GetTeachersByBranchAsync(int branchId)
         {
-            return _unitOfWork.Teachers.GetTeachersByBranch();
+            return await _unitOfWork.Teachers.GetTeachersByBranchAsync(branchId);
         }
 
         public void Update(Teacher teacher)

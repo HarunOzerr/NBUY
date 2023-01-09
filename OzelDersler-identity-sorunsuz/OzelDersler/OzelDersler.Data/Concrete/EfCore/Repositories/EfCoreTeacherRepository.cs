@@ -1,4 +1,5 @@
-﻿using OzelDersler.Data.Abstract;
+﻿using Microsoft.EntityFrameworkCore;
+using OzelDersler.Data.Abstract;
 using OzelDersler.Data.Concrete.EfCore.Contexts;
 using OzelDersler.Entity.Concrete;
 using System;
@@ -19,14 +20,18 @@ namespace OzelDersler.Data.Concrete.EfCore.Repositories
         {
             get { return _context as OzelDerslerContext; }
         }
-        public Task<List<Teacher>> GetHomePageTeachersAsync()
+        public async Task<List<Teacher>> GetHomePageTeachersAsync()
         {
-            throw new NotImplementedException();
+            return await OzelDerslerContext.Teachers.Where(t => t.IsHome == true).ToListAsync();
         }
 
-        public List<Teacher> GetTeachersByBranch()
+        public async Task<List<Teacher>> GetTeachersByBranchAsync(int branchId)
         {
-            throw new NotImplementedException();
+            var teachers = OzelDerslerContext.Teachers.AsQueryable();
+                teachers = teachers
+                    .Include(t => t.Branch)
+                    .Where(t => t.BranchId == branchId);
+            return await teachers.ToListAsync();
         }
     }
 }
