@@ -1491,19 +1491,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SABAH\\.nuget\\packages\\": {}
+    "C:\\Users\\harun\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler-identity-sorunsuz\\OzelDersler\\OzelDersler.Web\\OzelDersler.Web.csproj",
+      "projectUniqueName": "C:\\Users\\harun\\Documents\\GitHub\\NBUY\\OzelDersler-identity-sorunsuz\\OzelDersler\\OzelDersler.Web\\OzelDersler.Web.csproj",
       "projectName": "OzelDersler.Web",
-      "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler-identity-sorunsuz\\OzelDersler\\OzelDersler.Web\\OzelDersler.Web.csproj",
-      "packagesPath": "C:\\Users\\SABAH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler-identity-sorunsuz\\OzelDersler\\OzelDersler.Web\\obj\\",
+      "projectPath": "C:\\Users\\harun\\Documents\\GitHub\\NBUY\\OzelDersler-identity-sorunsuz\\OzelDersler\\OzelDersler.Web\\OzelDersler.Web.csproj",
+      "packagesPath": "C:\\Users\\harun\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\harun\\Documents\\GitHub\\NBUY\\OzelDersler-identity-sorunsuz\\OzelDersler\\OzelDersler.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\harun\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1517,8 +1517,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler-identity-sorunsuz\\OzelDersler\\OzelDersler.Business\\OzelDersler.Business.csproj": {
-              "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\OzelDersler-identity-sorunsuz\\OzelDersler\\OzelDersler.Business\\OzelDersler.Business.csproj"
+            "C:\\Users\\harun\\Documents\\GitHub\\NBUY\\OzelDersler-identity-sorunsuz\\OzelDersler\\OzelDersler.Business\\OzelDersler.Business.csproj": {
+              "projectPath": "C:\\Users\\harun\\Documents\\GitHub\\NBUY\\OzelDersler-identity-sorunsuz\\OzelDersler\\OzelDersler.Business\\OzelDersler.Business.csproj"
             }
           }
         }
@@ -1563,7 +1563,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

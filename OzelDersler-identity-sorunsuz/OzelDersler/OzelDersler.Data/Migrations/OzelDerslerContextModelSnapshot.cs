@@ -103,12 +103,32 @@ namespace OzelDersler.Data.Migrations
                         new
                         {
                             UserId = "student",
-                            RoleId = "678f05b2-e24f-407f-ae19-dd510dd67337"
+                            RoleId = "68f905e2-9f93-4c26-a61b-f2d2e41a68a3"
                         },
                         new
                         {
                             UserId = "teacher",
-                            RoleId = "a211f06a-36a1-4541-a33d-c02a5381b89d"
+                            RoleId = "68ef393d-d8f8-450c-b333-ac34881642a7"
+                        },
+                        new
+                        {
+                            UserId = "teacher1",
+                            RoleId = "68ef393d-d8f8-450c-b333-ac34881642a7"
+                        },
+                        new
+                        {
+                            UserId = "teacher2",
+                            RoleId = "68ef393d-d8f8-450c-b333-ac34881642a7"
+                        },
+                        new
+                        {
+                            UserId = "teacher3",
+                            RoleId = "68ef393d-d8f8-450c-b333-ac34881642a7"
+                        },
+                        new
+                        {
+                            UserId = "teacher4",
+                            RoleId = "68ef393d-d8f8-450c-b333-ac34881642a7"
                         });
                 });
 
@@ -240,14 +260,14 @@ namespace OzelDersler.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "a211f06a-36a1-4541-a33d-c02a5381b89d",
+                            Id = "68ef393d-d8f8-450c-b333-ac34881642a7",
                             Description = "Teacher Rolü",
                             Name = "Teacher",
                             NormalizedName = "TEACHER"
                         },
                         new
                         {
-                            Id = "678f05b2-e24f-407f-ae19-dd510dd67337",
+                            Id = "68f905e2-9f93-4c26-a61b-f2d2e41a68a3",
                             Description = "Student Rolü",
                             Name = "Student",
                             NormalizedName = "STUDENT"
@@ -322,13 +342,13 @@ namespace OzelDersler.Data.Migrations
                         {
                             Id = "student",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "22b9514c-e81e-4ec7-8f7b-1cd9572f5134",
+                            ConcurrencyStamp = "4de921f9-0032-4eca-b9ea-d2a55bb37cbe",
                             Email = "harun@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "STUDENT",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "e8b8c7c7-4560-49bb-8736-b164ed99fbbf",
+                            SecurityStamp = "c91d8f3c-1977-4b7f-aa13-a8e1777412c8",
                             TwoFactorEnabled = false,
                             UserName = "student"
                         },
@@ -336,15 +356,71 @@ namespace OzelDersler.Data.Migrations
                         {
                             Id = "teacher",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "0b7ceced-8311-4f32-8ced-ae9c6ab0e786",
-                            Email = "mert@gmail.com",
+                            ConcurrencyStamp = "d5584bad-c9a9-4685-be90-e7afa316465f",
+                            Email = "teacher@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "TEACHER",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "7e4b61bb-7b24-468f-9d09-ae7fcce40106",
+                            SecurityStamp = "099bf97f-9840-45fb-a216-9da205b2fcaf",
                             TwoFactorEnabled = false,
                             UserName = "teacher"
+                        },
+                        new
+                        {
+                            Id = "teacher1",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "72556b4d-8242-48ca-acdc-dc8fedf7ed05",
+                            Email = "teacher@gmail.com",
+                            EmailConfirmed = false,
+                            LockoutEnabled = false,
+                            NormalizedUserName = "TEACHER1",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "8451ef15-b558-4382-ae30-5731523b62ad",
+                            TwoFactorEnabled = false,
+                            UserName = "teacher1"
+                        },
+                        new
+                        {
+                            Id = "teacher2",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "9fc38abb-085c-4a38-ab1d-fdad338c1511",
+                            Email = "teacher@gmail.com",
+                            EmailConfirmed = false,
+                            LockoutEnabled = false,
+                            NormalizedUserName = "TEACHER2",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "1f47afa4-d44c-4a8b-9b84-45f63bf3a3b2",
+                            TwoFactorEnabled = false,
+                            UserName = "teacher2"
+                        },
+                        new
+                        {
+                            Id = "teacher3",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "1d68b879-c8d4-4395-8b06-50ac6f4491a9",
+                            Email = "teacher@gmail.com",
+                            EmailConfirmed = false,
+                            LockoutEnabled = false,
+                            NormalizedUserName = "TEACHER3",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "900ebe04-de53-4062-ba4d-612c5b39ec62",
+                            TwoFactorEnabled = false,
+                            UserName = "teacher3"
+                        },
+                        new
+                        {
+                            Id = "teacher4",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "25587a63-cde2-4fed-a1ad-14e9b60f67fe",
+                            Email = "teacher@gmail.com",
+                            EmailConfirmed = false,
+                            LockoutEnabled = false,
+                            NormalizedUserName = "TEACHER4",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "cec61c4b-07cf-4de7-a6a1-6e3546a11e97",
+                            TwoFactorEnabled = false,
+                            UserName = "teacher4"
                         });
                 });
 
@@ -467,12 +543,84 @@ namespace OzelDersler.Data.Migrations
                             Experience = 5,
                             FirstName = "Mert",
                             Gender = "Erkek",
-                            ImageUrl = "mert.png",
+                            ImageUrl = "10.png",
                             IsHome = true,
                             Job = "Developer",
                             LastName = "Muslu",
                             PricePerHour = 350,
                             UserId = "teacher"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            About = "Müziğe ilgi duyuyorum. Müzikle birlikte yabancı dillerin de öğrenilebileceğine inanıyorum.",
+                            Address = "Başakşehir",
+                            Age = 24,
+                            BranchId = 4,
+                            City = "İstanbul",
+                            Experience = 2,
+                            FirstName = "Gonca",
+                            Gender = "Kadın",
+                            ImageUrl = "11.png",
+                            IsHome = true,
+                            Job = "Almanca Öğretmeni",
+                            LastName = "Özer",
+                            PricePerHour = 500,
+                            UserId = "teacher1"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            About = "Sınıf öğretmenliği yapıyorum. Öğrencilerimi eğitmeyi ve onlara bir şeyler katmayı seviyorum.",
+                            Address = "Göztepe",
+                            Age = 30,
+                            BranchId = 2,
+                            City = "İstanbul",
+                            Experience = 8,
+                            FirstName = "Hatice",
+                            Gender = "Kadın",
+                            ImageUrl = "11.png",
+                            IsHome = true,
+                            Job = "Sınıf Öğretmeni",
+                            LastName = "Durmuş",
+                            PricePerHour = 500,
+                            UserId = "teacher2"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            About = "Aktif olarak ingilizce tercümanlığı ile meşgulüm. Senelerdir ingilizce alanınca tezler ve çeviriler hazırlıyorum. Öğrencilerime her seviyede ingilizce eğitimi verebilirim.",
+                            Address = "Kartal",
+                            Age = 45,
+                            BranchId = 3,
+                            City = "İstanbul",
+                            Experience = 20,
+                            FirstName = "Ahmet",
+                            Gender = "Erkek",
+                            ImageUrl = "10.png",
+                            IsHome = true,
+                            Job = "İngilizce Tecrümanı",
+                            LastName = "Yılmaz",
+                            PricePerHour = 900,
+                            UserId = "teacher3"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            About = "Yurtdışında gördüğüm müzik eğitimiyle birlikte türkiyede aktif olarak öğretmenlik yapmaktayım. Çeşitli organizasyonlarda ve yarışmalarda başarılarım bulunmakta. Ses eğitimi ve müzik bilgisi alanında öğrencilerimi ileri seviyeye taşımak için elimden geleni yapmaktayım.",
+                            Address = "Çağlayan",
+                            Age = 33,
+                            BranchId = 4,
+                            City = "Ankara",
+                            Experience = 10,
+                            FirstName = "David",
+                            Gender = "Erkek",
+                            ImageUrl = "10.png",
+                            IsHome = true,
+                            Job = "Müzik Öğretmeni",
+                            LastName = "Dark",
+                            PricePerHour = 600,
+                            UserId = "teacher4"
                         });
                 });
 

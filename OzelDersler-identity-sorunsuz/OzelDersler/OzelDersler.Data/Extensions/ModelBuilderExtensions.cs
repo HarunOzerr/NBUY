@@ -26,10 +26,38 @@ namespace OzelDersler.Data.Extensions
                 new User
                 {
                     Id = "teacher",
-                    Email = "mert@gmail.com",
+                    Email = "teacher@gmail.com",
                     UserName = "teacher",
                     NormalizedUserName = "TEACHER"
-                }
+                },
+                new User
+                {
+                    Id = "teacher1",
+                    Email = "teacher@gmail.com",
+                    UserName = "teacher1",
+                    NormalizedUserName = "TEACHER1"
+                },
+                new User
+                {
+                    Id = "teacher2",
+                    Email = "teacher@gmail.com",
+                    UserName = "teacher2",
+                    NormalizedUserName = "TEACHER2"
+                },
+                new User
+                {
+                    Id = "teacher3",
+                    Email = "teacher@gmail.com",
+                    UserName = "teacher3",
+                    NormalizedUserName = "TEACHER3"
+                },
+                new User
+                {
+                    Id = "teacher4",
+                    Email = "teacher@gmail.com",
+                    UserName = "teacher4",
+                    NormalizedUserName = "TEACHER4"
+                },
             };
             modelBuilder.Entity<User>().HasData(users);
 
@@ -62,7 +90,27 @@ namespace OzelDersler.Data.Extensions
                 {
                     UserId=users[1].Id,
                     RoleId=roles.First(r=>r.Name=="Teacher").Id
-                }
+                },
+                new IdentityUserRole<string>
+                {
+                    UserId=users[2].Id,
+                    RoleId=roles.First(r=>r.Name=="Teacher").Id
+                },
+                new IdentityUserRole<string>
+                {
+                    UserId=users[3].Id,
+                    RoleId=roles.First(r=>r.Name=="Teacher").Id
+                },
+                new IdentityUserRole<string>
+                {
+                    UserId=users[4].Id,
+                    RoleId=roles.First(r=>r.Name=="Teacher").Id
+                },
+                new IdentityUserRole<string>
+                {
+                    UserId=users[5].Id,
+                    RoleId=roles.First(r=>r.Name=="Teacher").Id
+                },
             };
             modelBuilder.Entity<IdentityUserRole<string>>().HasData(userRoles);
         }
