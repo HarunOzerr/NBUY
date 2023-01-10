@@ -14,6 +14,7 @@ builder.Services.AddDbContext<OzelDerslerContext>(options => options.UseSqlite(b
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IStudentService, StudentManager>();
 builder.Services.AddScoped<ITeacherService, TeacherManager>();
+builder.Services.AddScoped<IBranchService, BranchManager>();
 
 var app = builder.Build();
 
@@ -31,7 +32,14 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
+    name: "teachers",
+    pattern: "branch/{branchurl?}",
+    defaults: new { controller = "TeacherList", action = "TeacherList" }
+    );
+
+app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
 app.Run();

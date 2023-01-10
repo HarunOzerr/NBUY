@@ -25,12 +25,18 @@ namespace OzelDersler.Data.Concrete.EfCore.Repositories
             return await OzelDerslerContext.Teachers.Where(t => t.IsHome == true).ToListAsync();
         }
 
-        public async Task<List<Teacher>> GetTeachersByBranchAsync(int branchId)
+        public async Task<List<Teacher>> GetTeachersByBranchAsync(string branchUrl)
         {
-            var teachers = OzelDerslerContext.Teachers.AsQueryable();
-                teachers = teachers
-                    .Include(t => t.Branch)
-                    .Where(t => t.BranchId == branchId);
+            var teachers = OzelDerslerContext
+                .Teachers
+                .AsQueryable();
+            if (branchUrl != null)
+            {
+                teachers =
+                    teachers.Include(t => t.TeacherBranches)
+                    .ThenInclude(tb => tb.Branch)
+                    .Where(t => t.TeacherBranches.Any(tb => tb.Branch.Url == branchUrl));
+            }
             return await teachers.ToListAsync();
         }
     }

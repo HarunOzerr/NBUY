@@ -22,6 +22,7 @@ namespace OzelDersler.Data.Concrete.EfCore.Contexts
         }
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<TeacherBranch> TeacherBranches { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -29,6 +30,7 @@ namespace OzelDersler.Data.Concrete.EfCore.Contexts
             modelBuilder.ApplyConfiguration(new StudentConfig());
             modelBuilder.ApplyConfiguration(new TeacherConfig());
             modelBuilder.ApplyConfiguration(new BranchConfig());
+            modelBuilder.ApplyConfiguration(new TeacherBranchConfig());
             base.OnModelCreating(modelBuilder);
         }
     }

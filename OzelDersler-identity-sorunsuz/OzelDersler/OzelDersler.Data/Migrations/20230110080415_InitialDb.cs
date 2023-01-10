@@ -206,7 +206,6 @@ namespace OzelDersler.Data.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    BranchId = table.Column<int>(type: "INTEGER", nullable: false),
                     UserId = table.Column<string>(type: "TEXT", nullable: true),
                     IsHome = table.Column<bool>(type: "INTEGER", nullable: false),
                     Age = table.Column<int>(type: "INTEGER", nullable: false),
@@ -229,10 +228,28 @@ namespace OzelDersler.Data.Migrations
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TeacherBranches",
+                columns: table => new
+                {
+                    TeacherId = table.Column<int>(type: "INTEGER", nullable: false),
+                    BranchId = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TeacherBranches", x => new { x.TeacherId, x.BranchId });
                     table.ForeignKey(
-                        name: "FK_Teachers_Branches_BranchId",
+                        name: "FK_TeacherBranches_Branches_BranchId",
                         column: x => x.BranchId,
                         principalTable: "Branches",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_TeacherBranches_Teachers_TeacherId",
+                        column: x => x.TeacherId,
+                        principalTable: "Teachers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -242,8 +259,8 @@ namespace OzelDersler.Data.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Description", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "68ef393d-d8f8-450c-b333-ac34881642a7", null, "Teacher Rolü", "Teacher", "TEACHER" },
-                    { "68f905e2-9f93-4c26-a61b-f2d2e41a68a3", null, "Student Rolü", "Student", "STUDENT" }
+                    { "90e19216-ea25-4fa8-8239-99c2237afae1", null, "Teacher Rolü", "Teacher", "TEACHER" },
+                    { "cdf00d25-59f2-4df0-a0d6-e892e8228a86", null, "Student Rolü", "Student", "STUDENT" }
                 });
 
             migrationBuilder.InsertData(
@@ -251,12 +268,12 @@ namespace OzelDersler.Data.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "student", 0, "4de921f9-0032-4eca-b9ea-d2a55bb37cbe", "harun@gmail.com", false, false, null, null, "STUDENT", null, null, false, "c91d8f3c-1977-4b7f-aa13-a8e1777412c8", false, "student" },
-                    { "teacher", 0, "d5584bad-c9a9-4685-be90-e7afa316465f", "teacher@gmail.com", false, false, null, null, "TEACHER", null, null, false, "099bf97f-9840-45fb-a216-9da205b2fcaf", false, "teacher" },
-                    { "teacher1", 0, "72556b4d-8242-48ca-acdc-dc8fedf7ed05", "teacher@gmail.com", false, false, null, null, "TEACHER1", null, null, false, "8451ef15-b558-4382-ae30-5731523b62ad", false, "teacher1" },
-                    { "teacher2", 0, "9fc38abb-085c-4a38-ab1d-fdad338c1511", "teacher@gmail.com", false, false, null, null, "TEACHER2", null, null, false, "1f47afa4-d44c-4a8b-9b84-45f63bf3a3b2", false, "teacher2" },
-                    { "teacher3", 0, "1d68b879-c8d4-4395-8b06-50ac6f4491a9", "teacher@gmail.com", false, false, null, null, "TEACHER3", null, null, false, "900ebe04-de53-4062-ba4d-612c5b39ec62", false, "teacher3" },
-                    { "teacher4", 0, "25587a63-cde2-4fed-a1ad-14e9b60f67fe", "teacher@gmail.com", false, false, null, null, "TEACHER4", null, null, false, "cec61c4b-07cf-4de7-a6a1-6e3546a11e97", false, "teacher4" }
+                    { "student", 0, "8339b19b-fa76-473e-b1a0-0f73c3799ff6", "harun@gmail.com", false, false, null, null, "STUDENT", null, null, false, "b3e938d2-22b2-4ada-aec9-f4505d6a8778", false, "student" },
+                    { "teacher", 0, "dc3f9d3c-e98d-47f5-ad5b-4b6a7ebe8acc", "teacher@gmail.com", false, false, null, null, "TEACHER", null, null, false, "13baae26-dd14-45d7-ad93-9a3e1924a4df", false, "teacher" },
+                    { "teacher1", 0, "ed4d64e2-4192-4a27-86d2-fabcc15a624c", "teacher@gmail.com", false, false, null, null, "TEACHER1", null, null, false, "e9bd1005-038c-447c-8270-b2ce00220b1b", false, "teacher1" },
+                    { "teacher2", 0, "e565e017-7a5c-4702-952d-8134c8db4a52", "teacher@gmail.com", false, false, null, null, "TEACHER2", null, null, false, "cdf4a851-c1e0-432e-aa15-516f94871512", false, "teacher2" },
+                    { "teacher3", 0, "45aa6e8f-e2b8-4673-8e89-795e6688cf18", "teacher@gmail.com", false, false, null, null, "TEACHER3", null, null, false, "5d2d66c7-9d05-4289-bb2c-b8e8a3933267", false, "teacher3" },
+                    { "teacher4", 0, "182600f9-9450-49c0-ad86-6e661faa525d", "teacher@gmail.com", false, false, null, null, "TEACHER4", null, null, false, "c28b5f53-d932-48a3-a7f1-2a68a60e3269", false, "teacher4" }
                 });
 
             migrationBuilder.InsertData(
@@ -277,12 +294,12 @@ namespace OzelDersler.Data.Migrations
                 columns: new[] { "RoleId", "UserId" },
                 values: new object[,]
                 {
-                    { "68f905e2-9f93-4c26-a61b-f2d2e41a68a3", "student" },
-                    { "68ef393d-d8f8-450c-b333-ac34881642a7", "teacher" },
-                    { "68ef393d-d8f8-450c-b333-ac34881642a7", "teacher1" },
-                    { "68ef393d-d8f8-450c-b333-ac34881642a7", "teacher2" },
-                    { "68ef393d-d8f8-450c-b333-ac34881642a7", "teacher3" },
-                    { "68ef393d-d8f8-450c-b333-ac34881642a7", "teacher4" }
+                    { "cdf00d25-59f2-4df0-a0d6-e892e8228a86", "student" },
+                    { "90e19216-ea25-4fa8-8239-99c2237afae1", "teacher" },
+                    { "90e19216-ea25-4fa8-8239-99c2237afae1", "teacher1" },
+                    { "90e19216-ea25-4fa8-8239-99c2237afae1", "teacher2" },
+                    { "90e19216-ea25-4fa8-8239-99c2237afae1", "teacher3" },
+                    { "90e19216-ea25-4fa8-8239-99c2237afae1", "teacher4" }
                 });
 
             migrationBuilder.InsertData(
@@ -292,14 +309,26 @@ namespace OzelDersler.Data.Migrations
 
             migrationBuilder.InsertData(
                 table: "Teachers",
-                columns: new[] { "Id", "About", "Address", "Age", "BranchId", "City", "Experience", "FirstName", "Gender", "ImageUrl", "IsHome", "Job", "LastName", "PricePerHour", "UserId" },
+                columns: new[] { "Id", "About", "Address", "Age", "City", "Experience", "FirstName", "Gender", "ImageUrl", "IsHome", "Job", "LastName", "PricePerHour", "UserId" },
                 values: new object[,]
                 {
-                    { 1, "Şuanda Wissen Akademie'de yazılım kursundayım. Matematik alanında ders veriyorum.", "Esenler", 24, 1, "İstanbul", 5, "Mert", "Erkek", "10.png", true, "Developer", "Muslu", 350, "teacher" },
-                    { 2, "Müziğe ilgi duyuyorum. Müzikle birlikte yabancı dillerin de öğrenilebileceğine inanıyorum.", "Başakşehir", 24, 4, "İstanbul", 2, "Gonca", "Kadın", "11.png", true, "Almanca Öğretmeni", "Özer", 500, "teacher1" },
-                    { 3, "Sınıf öğretmenliği yapıyorum. Öğrencilerimi eğitmeyi ve onlara bir şeyler katmayı seviyorum.", "Göztepe", 30, 2, "İstanbul", 8, "Hatice", "Kadın", "11.png", true, "Sınıf Öğretmeni", "Durmuş", 500, "teacher2" },
-                    { 4, "Aktif olarak ingilizce tercümanlığı ile meşgulüm. Senelerdir ingilizce alanınca tezler ve çeviriler hazırlıyorum. Öğrencilerime her seviyede ingilizce eğitimi verebilirim.", "Kartal", 45, 3, "İstanbul", 20, "Ahmet", "Erkek", "10.png", true, "İngilizce Tecrümanı", "Yılmaz", 900, "teacher3" },
-                    { 5, "Yurtdışında gördüğüm müzik eğitimiyle birlikte türkiyede aktif olarak öğretmenlik yapmaktayım. Çeşitli organizasyonlarda ve yarışmalarda başarılarım bulunmakta. Ses eğitimi ve müzik bilgisi alanında öğrencilerimi ileri seviyeye taşımak için elimden geleni yapmaktayım.", "Çağlayan", 33, 4, "Ankara", 10, "David", "Erkek", "10.png", true, "Müzik Öğretmeni", "Dark", 600, "teacher4" }
+                    { 1, "Şuanda Wissen Akademie'de yazılım kursundayım. Matematik alanında ders veriyorum.", "Esenler", 24, "İstanbul", 5, "Mert", "Erkek", "10.png", true, "Developer", "Muslu", 350, "teacher" },
+                    { 2, "Müziğe ilgi duyuyorum. Müzikle birlikte yabancı dillerin de öğrenilebileceğine inanıyorum.", "Başakşehir", 24, "İstanbul", 2, "Gonca", "Kadın", "11.png", true, "Almanca Öğretmeni", "Özer", 500, "teacher1" },
+                    { 3, "Sınıf öğretmenliği yapıyorum. Öğrencilerimi eğitmeyi ve onlara bir şeyler katmayı seviyorum.", "Göztepe", 30, "İstanbul", 8, "Hatice", "Kadın", "11.png", true, "Sınıf Öğretmeni", "Durmuş", 500, "teacher2" },
+                    { 4, "Aktif olarak ingilizce tercümanlığı ile meşgulüm. Senelerdir ingilizce alanınca tezler ve çeviriler hazırlıyorum. Öğrencilerime her seviyede ingilizce eğitimi verebilirim.", "Kartal", 45, "İstanbul", 20, "Ahmet", "Erkek", "10.png", true, "İngilizce Tecrümanı", "Yılmaz", 900, "teacher3" },
+                    { 5, "Yurtdışında gördüğüm müzik eğitimiyle birlikte türkiyede aktif olarak öğretmenlik yapmaktayım. Çeşitli organizasyonlarda ve yarışmalarda başarılarım bulunmakta. Ses eğitimi ve müzik bilgisi alanında öğrencilerimi ileri seviyeye taşımak için elimden geleni yapmaktayım.", "Çağlayan", 33, "Ankara", 10, "David", "Erkek", "10.png", true, "Müzik Öğretmeni", "Dark", 600, "teacher4" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "TeacherBranches",
+                columns: new[] { "BranchId", "TeacherId" },
+                values: new object[,]
+                {
+                    { 1, 1 },
+                    { 3, 1 },
+                    { 1, 2 },
+                    { 2, 3 },
+                    { 4, 4 }
                 });
 
             migrationBuilder.CreateIndex(
@@ -345,8 +374,8 @@ namespace OzelDersler.Data.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Teachers_BranchId",
-                table: "Teachers",
+                name: "IX_TeacherBranches_BranchId",
+                table: "TeacherBranches",
                 column: "BranchId");
 
             migrationBuilder.CreateIndex(
@@ -377,16 +406,19 @@ namespace OzelDersler.Data.Migrations
                 name: "Students");
 
             migrationBuilder.DropTable(
-                name: "Teachers");
+                name: "TeacherBranches");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
+                name: "Branches");
 
             migrationBuilder.DropTable(
-                name: "Branches");
+                name: "Teachers");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUsers");
         }
     }
 }

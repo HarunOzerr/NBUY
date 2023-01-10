@@ -27,7 +27,6 @@ public class HomeController : Controller
                 FirstName= teacher.FirstName,
                 LastName = teacher.LastName,
                 Age = teacher.Age,
-                BranchId = teacher.BranchId,
                 ImageUrl = teacher.ImageUrl,
                 City = teacher.City,
                 About = teacher.About,

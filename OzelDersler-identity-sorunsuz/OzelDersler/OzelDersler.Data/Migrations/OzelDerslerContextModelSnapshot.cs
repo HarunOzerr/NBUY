@@ -103,32 +103,32 @@ namespace OzelDersler.Data.Migrations
                         new
                         {
                             UserId = "student",
-                            RoleId = "68f905e2-9f93-4c26-a61b-f2d2e41a68a3"
+                            RoleId = "cdf00d25-59f2-4df0-a0d6-e892e8228a86"
                         },
                         new
                         {
                             UserId = "teacher",
-                            RoleId = "68ef393d-d8f8-450c-b333-ac34881642a7"
+                            RoleId = "90e19216-ea25-4fa8-8239-99c2237afae1"
                         },
                         new
                         {
                             UserId = "teacher1",
-                            RoleId = "68ef393d-d8f8-450c-b333-ac34881642a7"
+                            RoleId = "90e19216-ea25-4fa8-8239-99c2237afae1"
                         },
                         new
                         {
                             UserId = "teacher2",
-                            RoleId = "68ef393d-d8f8-450c-b333-ac34881642a7"
+                            RoleId = "90e19216-ea25-4fa8-8239-99c2237afae1"
                         },
                         new
                         {
                             UserId = "teacher3",
-                            RoleId = "68ef393d-d8f8-450c-b333-ac34881642a7"
+                            RoleId = "90e19216-ea25-4fa8-8239-99c2237afae1"
                         },
                         new
                         {
                             UserId = "teacher4",
-                            RoleId = "68ef393d-d8f8-450c-b333-ac34881642a7"
+                            RoleId = "90e19216-ea25-4fa8-8239-99c2237afae1"
                         });
                 });
 
@@ -260,14 +260,14 @@ namespace OzelDersler.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "68ef393d-d8f8-450c-b333-ac34881642a7",
+                            Id = "90e19216-ea25-4fa8-8239-99c2237afae1",
                             Description = "Teacher Rolü",
                             Name = "Teacher",
                             NormalizedName = "TEACHER"
                         },
                         new
                         {
-                            Id = "68f905e2-9f93-4c26-a61b-f2d2e41a68a3",
+                            Id = "cdf00d25-59f2-4df0-a0d6-e892e8228a86",
                             Description = "Student Rolü",
                             Name = "Student",
                             NormalizedName = "STUDENT"
@@ -342,13 +342,13 @@ namespace OzelDersler.Data.Migrations
                         {
                             Id = "student",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "4de921f9-0032-4eca-b9ea-d2a55bb37cbe",
+                            ConcurrencyStamp = "8339b19b-fa76-473e-b1a0-0f73c3799ff6",
                             Email = "harun@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "STUDENT",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c91d8f3c-1977-4b7f-aa13-a8e1777412c8",
+                            SecurityStamp = "b3e938d2-22b2-4ada-aec9-f4505d6a8778",
                             TwoFactorEnabled = false,
                             UserName = "student"
                         },
@@ -356,13 +356,13 @@ namespace OzelDersler.Data.Migrations
                         {
                             Id = "teacher",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "d5584bad-c9a9-4685-be90-e7afa316465f",
+                            ConcurrencyStamp = "dc3f9d3c-e98d-47f5-ad5b-4b6a7ebe8acc",
                             Email = "teacher@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "TEACHER",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "099bf97f-9840-45fb-a216-9da205b2fcaf",
+                            SecurityStamp = "13baae26-dd14-45d7-ad93-9a3e1924a4df",
                             TwoFactorEnabled = false,
                             UserName = "teacher"
                         },
@@ -370,13 +370,13 @@ namespace OzelDersler.Data.Migrations
                         {
                             Id = "teacher1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "72556b4d-8242-48ca-acdc-dc8fedf7ed05",
+                            ConcurrencyStamp = "ed4d64e2-4192-4a27-86d2-fabcc15a624c",
                             Email = "teacher@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "TEACHER1",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "8451ef15-b558-4382-ae30-5731523b62ad",
+                            SecurityStamp = "e9bd1005-038c-447c-8270-b2ce00220b1b",
                             TwoFactorEnabled = false,
                             UserName = "teacher1"
                         },
@@ -384,13 +384,13 @@ namespace OzelDersler.Data.Migrations
                         {
                             Id = "teacher2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "9fc38abb-085c-4a38-ab1d-fdad338c1511",
+                            ConcurrencyStamp = "e565e017-7a5c-4702-952d-8134c8db4a52",
                             Email = "teacher@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "TEACHER2",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1f47afa4-d44c-4a8b-9b84-45f63bf3a3b2",
+                            SecurityStamp = "cdf4a851-c1e0-432e-aa15-516f94871512",
                             TwoFactorEnabled = false,
                             UserName = "teacher2"
                         },
@@ -398,13 +398,13 @@ namespace OzelDersler.Data.Migrations
                         {
                             Id = "teacher3",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "1d68b879-c8d4-4395-8b06-50ac6f4491a9",
+                            ConcurrencyStamp = "45aa6e8f-e2b8-4673-8e89-795e6688cf18",
                             Email = "teacher@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "TEACHER3",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "900ebe04-de53-4062-ba4d-612c5b39ec62",
+                            SecurityStamp = "5d2d66c7-9d05-4289-bb2c-b8e8a3933267",
                             TwoFactorEnabled = false,
                             UserName = "teacher3"
                         },
@@ -412,13 +412,13 @@ namespace OzelDersler.Data.Migrations
                         {
                             Id = "teacher4",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "25587a63-cde2-4fed-a1ad-14e9b60f67fe",
+                            ConcurrencyStamp = "182600f9-9450-49c0-ad86-6e661faa525d",
                             Email = "teacher@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "TEACHER4",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "cec61c4b-07cf-4de7-a6a1-6e3546a11e97",
+                            SecurityStamp = "c28b5f53-d932-48a3-a7f1-2a68a60e3269",
                             TwoFactorEnabled = false,
                             UserName = "teacher4"
                         });
@@ -490,9 +490,6 @@ namespace OzelDersler.Data.Migrations
                     b.Property<int>("Age")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("BranchId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("City")
                         .HasColumnType("TEXT");
 
@@ -525,8 +522,6 @@ namespace OzelDersler.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BranchId");
-
                     b.HasIndex("UserId");
 
                     b.ToTable("Teachers");
@@ -538,7 +533,6 @@ namespace OzelDersler.Data.Migrations
                             About = "Şuanda Wissen Akademie'de yazılım kursundayım. Matematik alanında ders veriyorum.",
                             Address = "Esenler",
                             Age = 24,
-                            BranchId = 1,
                             City = "İstanbul",
                             Experience = 5,
                             FirstName = "Mert",
@@ -556,7 +550,6 @@ namespace OzelDersler.Data.Migrations
                             About = "Müziğe ilgi duyuyorum. Müzikle birlikte yabancı dillerin de öğrenilebileceğine inanıyorum.",
                             Address = "Başakşehir",
                             Age = 24,
-                            BranchId = 4,
                             City = "İstanbul",
                             Experience = 2,
                             FirstName = "Gonca",
@@ -574,7 +567,6 @@ namespace OzelDersler.Data.Migrations
                             About = "Sınıf öğretmenliği yapıyorum. Öğrencilerimi eğitmeyi ve onlara bir şeyler katmayı seviyorum.",
                             Address = "Göztepe",
                             Age = 30,
-                            BranchId = 2,
                             City = "İstanbul",
                             Experience = 8,
                             FirstName = "Hatice",
@@ -592,7 +584,6 @@ namespace OzelDersler.Data.Migrations
                             About = "Aktif olarak ingilizce tercümanlığı ile meşgulüm. Senelerdir ingilizce alanınca tezler ve çeviriler hazırlıyorum. Öğrencilerime her seviyede ingilizce eğitimi verebilirim.",
                             Address = "Kartal",
                             Age = 45,
-                            BranchId = 3,
                             City = "İstanbul",
                             Experience = 20,
                             FirstName = "Ahmet",
@@ -610,7 +601,6 @@ namespace OzelDersler.Data.Migrations
                             About = "Yurtdışında gördüğüm müzik eğitimiyle birlikte türkiyede aktif olarak öğretmenlik yapmaktayım. Çeşitli organizasyonlarda ve yarışmalarda başarılarım bulunmakta. Ses eğitimi ve müzik bilgisi alanında öğrencilerimi ileri seviyeye taşımak için elimden geleni yapmaktayım.",
                             Address = "Çağlayan",
                             Age = 33,
-                            BranchId = 4,
                             City = "Ankara",
                             Experience = 10,
                             FirstName = "David",
@@ -621,6 +611,48 @@ namespace OzelDersler.Data.Migrations
                             LastName = "Dark",
                             PricePerHour = 600,
                             UserId = "teacher4"
+                        });
+                });
+
+            modelBuilder.Entity("OzelDersler.Entity.Concrete.TeacherBranch", b =>
+                {
+                    b.Property<int>("TeacherId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("BranchId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("TeacherId", "BranchId");
+
+                    b.HasIndex("BranchId");
+
+                    b.ToTable("TeacherBranches", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            TeacherId = 1,
+                            BranchId = 1
+                        },
+                        new
+                        {
+                            TeacherId = 2,
+                            BranchId = 1
+                        },
+                        new
+                        {
+                            TeacherId = 3,
+                            BranchId = 2
+                        },
+                        new
+                        {
+                            TeacherId = 1,
+                            BranchId = 3
+                        },
+                        new
+                        {
+                            TeacherId = 4,
+                            BranchId = 4
                         });
                 });
 
@@ -686,19 +718,30 @@ namespace OzelDersler.Data.Migrations
 
             modelBuilder.Entity("OzelDersler.Entity.Concrete.Teacher", b =>
                 {
+                    b.HasOne("OzelDersler.Entity.Concrete.Identity.User", "User")
+                        .WithMany("Teachers")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("OzelDersler.Entity.Concrete.TeacherBranch", b =>
+                {
                     b.HasOne("OzelDersler.Entity.Concrete.Branch", "Branch")
                         .WithMany()
                         .HasForeignKey("BranchId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("OzelDersler.Entity.Concrete.Identity.User", "User")
-                        .WithMany("Teachers")
-                        .HasForeignKey("UserId");
+                    b.HasOne("OzelDersler.Entity.Concrete.Teacher", "Teacher")
+                        .WithMany("TeacherBranches")
+                        .HasForeignKey("TeacherId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Branch");
 
-                    b.Navigation("User");
+                    b.Navigation("Teacher");
                 });
 
             modelBuilder.Entity("OzelDersler.Entity.Concrete.Identity.User", b =>
@@ -706,6 +749,11 @@ namespace OzelDersler.Data.Migrations
                     b.Navigation("Students");
 
                     b.Navigation("Teachers");
+                });
+
+            modelBuilder.Entity("OzelDersler.Entity.Concrete.Teacher", b =>
+                {
+                    b.Navigation("TeacherBranches");
                 });
 #pragma warning restore 612, 618
         }
