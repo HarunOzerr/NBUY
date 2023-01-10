@@ -23,7 +23,7 @@ namespace OzelDersler.Web.Controllers
 
 
         [HttpPost]
-        public Task<IActionResult> Register(RegisterDto registerDto, string registerType)
+        public async Task<IActionResult> Register(RegisterDto registerDto, string registerType)
         {
             if (ModelState.IsValid)
             {
@@ -42,10 +42,10 @@ namespace OzelDersler.Web.Controllers
                             }
                         }.ToList()
                     };
+                    await _userManager.CreateAsync(user, registerDto.Password);
                 }
-                var result = await _userManager.CreateAsync(user, registerDto.Password);
             }
-            return View();
+            return View(registerDto);
         }
     }
 }
