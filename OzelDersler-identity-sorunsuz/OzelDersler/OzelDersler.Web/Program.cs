@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using OzelDersler.Business.Abstract;
@@ -14,9 +14,24 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<OzelDerslerContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("SqliteConnection")));
 
-builder.Services.AddIdentity<User, IdentityRole>()
+builder.Services.AddIdentity<User, Role>()
     .AddEntityFrameworkStores<OzelDerslerContext>()
     .AddDefaultTokenProviders();
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/account/login";
+    options.LogoutPath = "/account/logout";
+    options.AccessDeniedPath = "/account/accessdenied";
+    options.SlidingExpiration = true;
+    options.ExpireTimeSpan = TimeSpan.FromDays(50);
+    options.Cookie = new CookieBuilder
+    {
+        HttpOnly = true,
+        Name = "OzelDersler.Security.Cookie",
+        SameSite = SameSiteMode.Strict
+    };
+});
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IStudentService, StudentManager>();

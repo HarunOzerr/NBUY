@@ -10,10 +10,12 @@ namespace OzelDersler.Web.Controllers
     public class AccountController : Controller
     {
         private readonly UserManager<User> _userManager;
+        private readonly SignInManager<User> _signInManager;
 
-        public AccountController(UserManager<User> userManager)
+        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager)
         {
             _userManager = userManager;
+            _signInManager = signInManager;
         }
 
         public IActionResult Register()
@@ -33,19 +35,71 @@ namespace OzelDersler.Web.Controllers
                     {
                         UserName = registerDto.UserName,
                         Email = registerDto.Email,
-                        Teachers = new List<Teacher>
+                        Teachers = new Teacher
                         {
-                            new Teacher
-                            {
-                                FirstName = registerDto.FirstName,
-                                LastName = registerDto.LastName
-                            }
-                        }.ToList()
+                            FirstName = registerDto.FirstName,
+                            LastName = registerDto.LastName
+                        }
                     };
-                    await _userManager.CreateAsync(user, registerDto.Password);
+                    var result = await _userManager.CreateAsync(user, registerDto.Password);
+                    if (result.Succeeded)
+                    {
+                        await _userManager.AddToRoleAsync(user, "Teacher");
+                    }
+                }
+                else
+                {
+                    var user = new User
+                    {
+                        UserName = registerDto.UserName,
+                        Email = registerDto.Email,
+                        Students = new Student
+                        {
+                            FirstName = registerDto.FirstName,
+                            LastName = registerDto.LastName
+                        }
+                    };
+                    var result = await _userManager.CreateAsync(user, registerDto.Password);
+                    if (result.Succeeded)
+                    {
+                        await _userManager.AddToRoleAsync(user, "Student");
+                    }
                 }
             }
-            return View(registerDto);
+            return RedirectToAction("Index", "Home");
+        }
+
+        public IActionResult Login(string returnUrl = null)
+        {
+            return View(new LoginDto { ReturnUrl = returnUrl });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginDto loginDto)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByNameAsync(loginDto.UserName);
+                if (user == null)
+                {
+                    ModelState.AddModelError("", "Böyle bir kullanıcı bulunamadı.");
+                    return View(loginDto);
+                }
+                var result = await _signInManager.PasswordSignInAsync(user, loginDto.Password, true, true);
+                if (result.Succeeded)
+
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                ModelState.AddModelError("", "Kullanıcı adı ya da parola hatalı.");
+            }
+            return View(loginDto);
+        }
+
+        public async Task<IActionResult> LogOut()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

@@ -259,8 +259,8 @@ namespace OzelDersler.Data.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Description", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "90e19216-ea25-4fa8-8239-99c2237afae1", null, "Teacher Rolü", "Teacher", "TEACHER" },
-                    { "cdf00d25-59f2-4df0-a0d6-e892e8228a86", null, "Student Rolü", "Student", "STUDENT" }
+                    { "40c5c420-be46-44c8-821d-437699183ff3", null, "Student Rolü", "Student", "STUDENT" },
+                    { "815b03d3-708f-4495-967b-96a4c42061d4", null, "Teacher Rolü", "Teacher", "TEACHER" }
                 });
 
             migrationBuilder.InsertData(
@@ -268,12 +268,12 @@ namespace OzelDersler.Data.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "student", 0, "8339b19b-fa76-473e-b1a0-0f73c3799ff6", "harun@gmail.com", false, false, null, null, "STUDENT", null, null, false, "b3e938d2-22b2-4ada-aec9-f4505d6a8778", false, "student" },
-                    { "teacher", 0, "dc3f9d3c-e98d-47f5-ad5b-4b6a7ebe8acc", "teacher@gmail.com", false, false, null, null, "TEACHER", null, null, false, "13baae26-dd14-45d7-ad93-9a3e1924a4df", false, "teacher" },
-                    { "teacher1", 0, "ed4d64e2-4192-4a27-86d2-fabcc15a624c", "teacher@gmail.com", false, false, null, null, "TEACHER1", null, null, false, "e9bd1005-038c-447c-8270-b2ce00220b1b", false, "teacher1" },
-                    { "teacher2", 0, "e565e017-7a5c-4702-952d-8134c8db4a52", "teacher@gmail.com", false, false, null, null, "TEACHER2", null, null, false, "cdf4a851-c1e0-432e-aa15-516f94871512", false, "teacher2" },
-                    { "teacher3", 0, "45aa6e8f-e2b8-4673-8e89-795e6688cf18", "teacher@gmail.com", false, false, null, null, "TEACHER3", null, null, false, "5d2d66c7-9d05-4289-bb2c-b8e8a3933267", false, "teacher3" },
-                    { "teacher4", 0, "182600f9-9450-49c0-ad86-6e661faa525d", "teacher@gmail.com", false, false, null, null, "TEACHER4", null, null, false, "c28b5f53-d932-48a3-a7f1-2a68a60e3269", false, "teacher4" }
+                    { "student", 0, "dab02978-adcf-4845-ab53-9df836348ca2", "harun@gmail.com", false, false, null, null, "STUDENT", null, null, false, "f3cf1f03-1cf6-48a1-b9d0-74d921dd7b51", false, "student" },
+                    { "teacher", 0, "ace98a39-5b18-42ce-a72c-00c38cc75a2c", "teacher@gmail.com", false, false, null, null, "TEACHER", null, null, false, "bfc972ef-07b5-4995-b886-35a19948f730", false, "teacher" },
+                    { "teacher1", 0, "2a0731f1-8e7f-4a5d-adf5-faba12813b5b", "teacher@gmail.com", false, false, null, null, "TEACHER1", null, null, false, "fcab1aed-1587-483e-b610-800397ba0a24", false, "teacher1" },
+                    { "teacher2", 0, "cb6ebb5f-a5e2-4415-b134-edb1a4cf0f81", "teacher@gmail.com", false, false, null, null, "TEACHER2", null, null, false, "e60033e7-fd47-4ba6-a1a7-aa1aca857663", false, "teacher2" },
+                    { "teacher3", 0, "44be262b-c716-4aee-a90c-64e905208abf", "teacher@gmail.com", false, false, null, null, "TEACHER3", null, null, false, "26974f97-9fdd-4b57-905b-6e32f9762432", false, "teacher3" },
+                    { "teacher4", 0, "569cc490-0f84-43f5-be38-ba13c620c07c", "teacher@gmail.com", false, false, null, null, "TEACHER4", null, null, false, "fb93e81b-d910-4674-a21b-0fec9efc4073", false, "teacher4" }
                 });
 
             migrationBuilder.InsertData(
@@ -294,12 +294,12 @@ namespace OzelDersler.Data.Migrations
                 columns: new[] { "RoleId", "UserId" },
                 values: new object[,]
                 {
-                    { "cdf00d25-59f2-4df0-a0d6-e892e8228a86", "student" },
-                    { "90e19216-ea25-4fa8-8239-99c2237afae1", "teacher" },
-                    { "90e19216-ea25-4fa8-8239-99c2237afae1", "teacher1" },
-                    { "90e19216-ea25-4fa8-8239-99c2237afae1", "teacher2" },
-                    { "90e19216-ea25-4fa8-8239-99c2237afae1", "teacher3" },
-                    { "90e19216-ea25-4fa8-8239-99c2237afae1", "teacher4" }
+                    { "40c5c420-be46-44c8-821d-437699183ff3", "student" },
+                    { "815b03d3-708f-4495-967b-96a4c42061d4", "teacher" },
+                    { "815b03d3-708f-4495-967b-96a4c42061d4", "teacher1" },
+                    { "815b03d3-708f-4495-967b-96a4c42061d4", "teacher2" },
+                    { "815b03d3-708f-4495-967b-96a4c42061d4", "teacher3" },
+                    { "815b03d3-708f-4495-967b-96a4c42061d4", "teacher4" }
                 });
 
             migrationBuilder.InsertData(
@@ -371,7 +371,8 @@ namespace OzelDersler.Data.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Students_UserId",
                 table: "Students",
-                column: "UserId");
+                column: "UserId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_TeacherBranches_BranchId",
@@ -381,7 +382,8 @@ namespace OzelDersler.Data.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Teachers_UserId",
                 table: "Teachers",
-                column: "UserId");
+                column: "UserId",
+                unique: true);
         }
 
         /// <inheritdoc />

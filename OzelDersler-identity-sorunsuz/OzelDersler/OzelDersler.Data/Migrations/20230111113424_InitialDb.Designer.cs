@@ -11,7 +11,7 @@ using OzelDersler.Data.Concrete.EfCore.Contexts;
 namespace OzelDersler.Data.Migrations
 {
     [DbContext(typeof(OzelDerslerContext))]
-    [Migration("20230110080415_InitialDb")]
+    [Migration("20230111113424_InitialDb")]
     partial class InitialDb
     {
         /// <inheritdoc />
@@ -106,32 +106,32 @@ namespace OzelDersler.Data.Migrations
                         new
                         {
                             UserId = "student",
-                            RoleId = "cdf00d25-59f2-4df0-a0d6-e892e8228a86"
+                            RoleId = "40c5c420-be46-44c8-821d-437699183ff3"
                         },
                         new
                         {
                             UserId = "teacher",
-                            RoleId = "90e19216-ea25-4fa8-8239-99c2237afae1"
+                            RoleId = "815b03d3-708f-4495-967b-96a4c42061d4"
                         },
                         new
                         {
                             UserId = "teacher1",
-                            RoleId = "90e19216-ea25-4fa8-8239-99c2237afae1"
+                            RoleId = "815b03d3-708f-4495-967b-96a4c42061d4"
                         },
                         new
                         {
                             UserId = "teacher2",
-                            RoleId = "90e19216-ea25-4fa8-8239-99c2237afae1"
+                            RoleId = "815b03d3-708f-4495-967b-96a4c42061d4"
                         },
                         new
                         {
                             UserId = "teacher3",
-                            RoleId = "90e19216-ea25-4fa8-8239-99c2237afae1"
+                            RoleId = "815b03d3-708f-4495-967b-96a4c42061d4"
                         },
                         new
                         {
                             UserId = "teacher4",
-                            RoleId = "90e19216-ea25-4fa8-8239-99c2237afae1"
+                            RoleId = "815b03d3-708f-4495-967b-96a4c42061d4"
                         });
                 });
 
@@ -263,14 +263,14 @@ namespace OzelDersler.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "90e19216-ea25-4fa8-8239-99c2237afae1",
+                            Id = "815b03d3-708f-4495-967b-96a4c42061d4",
                             Description = "Teacher Rolü",
                             Name = "Teacher",
                             NormalizedName = "TEACHER"
                         },
                         new
                         {
-                            Id = "cdf00d25-59f2-4df0-a0d6-e892e8228a86",
+                            Id = "40c5c420-be46-44c8-821d-437699183ff3",
                             Description = "Student Rolü",
                             Name = "Student",
                             NormalizedName = "STUDENT"
@@ -345,13 +345,13 @@ namespace OzelDersler.Data.Migrations
                         {
                             Id = "student",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "8339b19b-fa76-473e-b1a0-0f73c3799ff6",
+                            ConcurrencyStamp = "dab02978-adcf-4845-ab53-9df836348ca2",
                             Email = "harun@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "STUDENT",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "b3e938d2-22b2-4ada-aec9-f4505d6a8778",
+                            SecurityStamp = "f3cf1f03-1cf6-48a1-b9d0-74d921dd7b51",
                             TwoFactorEnabled = false,
                             UserName = "student"
                         },
@@ -359,13 +359,13 @@ namespace OzelDersler.Data.Migrations
                         {
                             Id = "teacher",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "dc3f9d3c-e98d-47f5-ad5b-4b6a7ebe8acc",
+                            ConcurrencyStamp = "ace98a39-5b18-42ce-a72c-00c38cc75a2c",
                             Email = "teacher@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "TEACHER",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "13baae26-dd14-45d7-ad93-9a3e1924a4df",
+                            SecurityStamp = "bfc972ef-07b5-4995-b886-35a19948f730",
                             TwoFactorEnabled = false,
                             UserName = "teacher"
                         },
@@ -373,13 +373,13 @@ namespace OzelDersler.Data.Migrations
                         {
                             Id = "teacher1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "ed4d64e2-4192-4a27-86d2-fabcc15a624c",
+                            ConcurrencyStamp = "2a0731f1-8e7f-4a5d-adf5-faba12813b5b",
                             Email = "teacher@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "TEACHER1",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "e9bd1005-038c-447c-8270-b2ce00220b1b",
+                            SecurityStamp = "fcab1aed-1587-483e-b610-800397ba0a24",
                             TwoFactorEnabled = false,
                             UserName = "teacher1"
                         },
@@ -387,13 +387,13 @@ namespace OzelDersler.Data.Migrations
                         {
                             Id = "teacher2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e565e017-7a5c-4702-952d-8134c8db4a52",
+                            ConcurrencyStamp = "cb6ebb5f-a5e2-4415-b134-edb1a4cf0f81",
                             Email = "teacher@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "TEACHER2",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "cdf4a851-c1e0-432e-aa15-516f94871512",
+                            SecurityStamp = "e60033e7-fd47-4ba6-a1a7-aa1aca857663",
                             TwoFactorEnabled = false,
                             UserName = "teacher2"
                         },
@@ -401,13 +401,13 @@ namespace OzelDersler.Data.Migrations
                         {
                             Id = "teacher3",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "45aa6e8f-e2b8-4673-8e89-795e6688cf18",
+                            ConcurrencyStamp = "44be262b-c716-4aee-a90c-64e905208abf",
                             Email = "teacher@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "TEACHER3",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "5d2d66c7-9d05-4289-bb2c-b8e8a3933267",
+                            SecurityStamp = "26974f97-9fdd-4b57-905b-6e32f9762432",
                             TwoFactorEnabled = false,
                             UserName = "teacher3"
                         },
@@ -415,13 +415,13 @@ namespace OzelDersler.Data.Migrations
                         {
                             Id = "teacher4",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "182600f9-9450-49c0-ad86-6e661faa525d",
+                            ConcurrencyStamp = "569cc490-0f84-43f5-be38-ba13c620c07c",
                             Email = "teacher@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "TEACHER4",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c28b5f53-d932-48a3-a7f1-2a68a60e3269",
+                            SecurityStamp = "fb93e81b-d910-4674-a21b-0fec9efc4073",
                             TwoFactorEnabled = false,
                             UserName = "teacher4"
                         });
@@ -459,7 +459,8 @@ namespace OzelDersler.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId")
+                        .IsUnique();
 
                     b.ToTable("Students");
 
@@ -525,7 +526,8 @@ namespace OzelDersler.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId")
+                        .IsUnique();
 
                     b.ToTable("Teachers");
 
@@ -713,8 +715,8 @@ namespace OzelDersler.Data.Migrations
             modelBuilder.Entity("OzelDersler.Entity.Concrete.Student", b =>
                 {
                     b.HasOne("OzelDersler.Entity.Concrete.Identity.User", "User")
-                        .WithMany("Students")
-                        .HasForeignKey("UserId");
+                        .WithOne("Students")
+                        .HasForeignKey("OzelDersler.Entity.Concrete.Student", "UserId");
 
                     b.Navigation("User");
                 });
@@ -722,8 +724,8 @@ namespace OzelDersler.Data.Migrations
             modelBuilder.Entity("OzelDersler.Entity.Concrete.Teacher", b =>
                 {
                     b.HasOne("OzelDersler.Entity.Concrete.Identity.User", "User")
-                        .WithMany("Teachers")
-                        .HasForeignKey("UserId");
+                        .WithOne("Teachers")
+                        .HasForeignKey("OzelDersler.Entity.Concrete.Teacher", "UserId");
 
                     b.Navigation("User");
                 });

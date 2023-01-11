@@ -9,7 +9,7 @@ namespace OzelDersler.Entity.Concrete.Identity
 {
     public class User : IdentityUser
     {
-        public List<Student> Students { get; set; }
-        public List<Teacher> Teachers { get; set; }
+        public Student Students { get; set; }
+        public Teacher Teachers { get; set; }
     }
 }

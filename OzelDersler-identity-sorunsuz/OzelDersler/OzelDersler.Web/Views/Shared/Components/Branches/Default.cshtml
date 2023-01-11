@@ -2,8 +2,8 @@
 @model List<Branch>
 <div class="list-group">
     <a class="list-group-item list-group-item-action @(ViewBag.SelectedBranch==null ? "active" : "")"
-       asp-controller="TeacherList"
-       asp-action="TeacherList"
+       asp-controller="Home"
+       asp-action="Index"
        asp-route-branchurl="">Tümünü Göster</a>
     @foreach (var branch in Model)
     {
